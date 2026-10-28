@@ -1,0 +1,118 @@
+TRABALHO PRATICO - ROBO DE NEGOCIACAO (EXPERT ADVISOR) EM MQL5
+Modelagem e Projeto de Algoritmos para o Mercado Financeiro
+Ciencia da Computacao
+
+Aluna:     Luisa Caetano Araujo
+Professor: Dr. Alexandre Pimenta
+Robo:      ADX Cata-vento  -  mini indice WINV26
+
+
+CONTEUDO
+--------
+
+Robo_ADX_WIN.mq5               Codigo-fonte do Expert Advisor.
+                               Compila no MetaEditor com 0 errors, 0 warnings.
+
+Apresentacao_ADX_CataVento.pdf Apresentacao, 9 laminas.
+
+Parametros_ADX_CataVento.set   Os 17 parametros usados no teste. Carregar no
+                               Strategy Tester reproduz o relatorio abaixo.
+
+Evidencias/                    Relatorio do Strategy Tester (HTML autocontido,
+                               os graficos estao embutidos) e os graficos
+                               tambem em PNG separado.
+
+
+INDICADOR ESCOLHIDO: DMI / ADX
+------------------------------
+
+Em MQL5 a funcao iADX entrega as tres linhas nos buffers 0, 1 e 2 do MESMO
+handle: a linha ADX e as duas linhas direcionais DI+ e DI-. E a UNICA
+chamada de indicador do robo, e nao ha nenhuma media movel no codigo.
+
+A linha ADX sozinha nao permite construir robo nenhum, porque mede forca SEM
+direcao - marca 38 tanto numa alta quanto numa queda. Quem separa compra de
+venda sao DI+ e DI-. Por isso "usar o ADX" significa usar o sistema DMI
+inteiro.
+
+
+REGRAS DE ENTRADA
+-----------------
+
+  Compra:  DI+ > DI-   e   ADX >= 25   e   ADX subindo
+  Venda:   DI- > DI+   e   ADX >= 25   e   ADX subindo
+
+Tudo avaliado na barra FECHADA. A barra em formacao nunca e lida, porque o
+valor dela muda a cada tick.
+
+A regra de compra e a de venda com DI+ e DI- trocados: os dois sentidos sao
+equiprovaveis por construcao.
+
+
+REGRAS DE SAIDA
+---------------
+
+  Take Profit        375 pontos
+  Stop Loss          150 pontos
+  Trava zero a zero  apos 150 pontos a favor, o stop vai para o preco de
+                     entrada, eliminando a perda planejada da operacao
+  Encerramento       17:30, nenhuma posicao atravessa o fim do pregao
+
+Toda ordem sai da corretora ja com stop e alvo definidos.
+
+
+PARAMETROS IMPLEMENTADOS
+------------------------
+
+  InpDMIPeriodo          12        Periodos do DMI
+  InpADXMinimo           25,0      Limiar de forca (usado nos dois modos)
+  InpModoEntrada         ESTADO    Como o DMI gera a entrada
+  InpUsarConfirmacaoADX  true      SO no modo CRUZAMENTO - sem efeito aqui
+  InpBarrasConfirmacao   1         SO no modo CRUZAMENTO - sem efeito aqui
+  InpLote                1         Contratos por operacao
+  InpStopLoss            150       Stop Loss em pontos
+  InpTakeProfit          375       Take Profit em pontos
+  InpTravaZeroAZero      true      Mover o stop para a entrada
+  InpGatilhoZeroAZero    150       Pontos que acionam a trava
+  InpHoraInicio          09:15     Inicio da janela de entrada
+  InpHoraFim             16:30     Fim da janela de entrada
+  InpHoraFechamento      17:30     Encerramento das posicoes
+  InpGanhoMaxDia         500       Ganho maximo diario (R$)
+  InpPerdaMaxDia         300       Perda maxima diaria (R$)
+  InpMagic               20262     Magic Number
+  InpLogDetalhado        true      Registrar o motivo de cada recusa
+
+Todos sao editaveis na janela de propriedades do robo, sem alterar o
+codigo-fonte.
+
+Dois deles pertencem ao modo alternativo: InpUsarConfirmacaoADX e
+InpBarrasConfirmacao governam o mecanismo de armar e confirmar do modo
+CRUZAMENTO. Na configuracao entregue, que usa o modo ESTADO, eles nao tem
+efeito - ali a forca ja faz parte da propria condicao de entrada, avaliada na
+mesma barra.
+
+
+RESULTADO DOS TESTES
+--------------------
+
+Contrato WINV26, grafico M15, modelagem OHLC por 1 minuto, deposito de
+100.000 BRL sem alavancagem, 1 contrato por operacao. Periodo: todo o historico
+disponivel do contrato, de 15/04/2026 a 08/09/2026. Testado apenas no Strategy
+Tester, nunca em conta real.
+
+  Lucro                 +2.787,00 BRL
+  Fator de lucro        1,36
+  Negociacoes           533  (278 compras, 255 vendas)
+  Acerto                50,84%
+  Rebaixamento maximo   450,00  (0,44%)
+  Retorno por operacao  R$ 5,23
+
+  Qualidade do historico: 55%
+
+Arquivo: Evidencias/Relatorio_WINV26.html
+
+O contrato WINV26 vence em outubro e so ganha liquidez a partir de abril, entao
+o historico tem falhas - e isso que a qualidade de 55% indica. No Diario, 75%
+das entradas ocorrem na abertura exata da barra e 95% em ate cinco minutos: o
+atraso e o intervalo ate o primeiro tick chegar, nao uma falha da trava de
+barra nova. A decisao continua sendo tomada sobre barras fechadas.

@@ -1,0 +1,642 @@
+<meta charset="utf-8">
+<title>ADX Cata-vento — Robô de Negociação em MQL5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --void:    #080B0E;
+    --surface: #10161C;
+    --raise:   #18212A;
+    --line:    #22303B;
+    --line-2:  #2E3F4C;
+    --alta:    #2FD08A;
+    --baixa:   #FF4D6A;
+    --adx:     #F2B134;
+    --ink:     #EAF2F7;
+    --dim:     #8195A3;
+    --dimmer:  #55666F;
+
+    --slide-w: 1280px;
+    --slide-h: 720px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--void);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .deck { display: flex; flex-direction: column; align-items: center; gap: 26px; padding: 26px 16px 60px; }
+
+  .slide {
+    position: relative;
+    width: var(--slide-w);
+    height: var(--slide-h);
+    max-width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 52px 64px 74px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: .28;
+    pointer-events: none;
+  }
+  .slide > * { position: relative; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .7rem; font-weight: 500;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--dimmer); margin-bottom: 14px;
+  }
+  .eyebrow b { color: var(--adx); font-weight: 500; }
+
+  h1 {
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    font-size: 4.6rem; font-weight: 700;
+    line-height: .96; letter-spacing: -.035em; margin: 0;
+  }
+  h2 {
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    font-size: 2.35rem; font-weight: 600;
+    line-height: 1.04; letter-spacing: -.025em; margin: 0 0 6px;
+  }
+  h3 {
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.02rem; font-weight: 600; letter-spacing: -.01em; margin: 0;
+  }
+  .lede { font-size: 1.06rem; color: var(--dim); max-width: 46ch; line-height: 1.5; margin: 10px 0 0; }
+  .sub  { font-size: .93rem; color: var(--dim); line-height: 1.5; margin: 4px 0 0; }
+
+  code, .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .87em; color: var(--ink);
+  }
+  code {
+    background: var(--raise); border: 1px solid var(--line);
+    border-radius: 3px; padding: .1em .38em;
+  }
+
+  .rail {
+    position: absolute; left: 64px; right: 64px; bottom: 30px;
+    display: flex; align-items: flex-end; gap: 7px; height: 26px;
+  }
+  .rail i {
+    position: relative; flex: 0 0 5px; height: 12px;
+    background: var(--line-2); border-radius: 1px; display: block;
+  }
+  .rail i::before {
+    content: ""; position: absolute; left: 2px; width: 1px;
+    top: -5px; bottom: -5px; background: var(--line-2);
+  }
+  .rail i.done { background: var(--alta); height: 17px; }
+  .rail i.done::before { background: var(--alta); opacity: .55; }
+  .rail i.here { background: var(--adx); height: 24px; }
+  .rail i.here::before { background: var(--adx); opacity: .7; }
+  .slide.sem-rail .rail { display: none; }
+
+  .stamp {
+    position: absolute; right: 64px; bottom: 26px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .68rem; letter-spacing: .12em; color: var(--dimmer);
+  }
+
+  /* ---------- capa ---------- */
+  .capa { justify-content: center; padding-bottom: 74px; }
+  .capa h1 { font-size: 5.6rem; }
+  .capa .tick {
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem; letter-spacing: .2em;
+    color: var(--void); background: var(--alta);
+    padding: 4px 10px; border-radius: 2px; margin-bottom: 22px;
+  }
+  .capa-meta {
+    display: flex; gap: 40px; margin-top: 34px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .78rem; color: var(--dim);
+  }
+  .capa-meta b { display: block; color: var(--ink); font-weight: 500; font-size: 1.02rem; margin-top: 3px; }
+  #heroChart { position: absolute; right: 0; top: 0; height: 100%; width: 54%; opacity: .95; }
+
+  /* ---------- grids ---------- */
+  .cols { display: grid; gap: 26px; margin-top: 26px; flex: 0 0 auto; align-content: start; }
+  .c2 { grid-template-columns: 1fr 1fr; }
+  .c3 { grid-template-columns: repeat(3, 1fr); }
+  .c-larga { grid-template-columns: 1.25fr .75fr; }
+
+  .card {
+    background: var(--raise); border: 1px solid var(--line);
+    border-radius: 3px; padding: 17px 19px;
+    display: flex; flex-direction: column; gap: 7px; min-height: 0;
+  }
+  .card .k {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--dimmer);
+  }
+  .card p { margin: 0; font-size: .88rem; color: var(--dim); line-height: 1.5; }
+
+  .nums { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; margin-top: 30px; }
+  .nums.n4 { grid-template-columns: repeat(4, 1fr); }
+  .nums > div { background: var(--surface); padding: 22px 20px; }
+  .nums .v {
+    font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+    font-size: 2.5rem; font-weight: 700; letter-spacing: -.03em; line-height: 1;
+  }
+  .nums .l {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .64rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--dimmer); margin-top: 9px;
+  }
+  .up { color: var(--alta); }
+  .down { color: var(--baixa); }
+  .amb { color: var(--adx); }
+
+  .passos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 34px; margin-top: 22px; }
+  .passo {
+    display: grid; grid-template-columns: 26px 1fr; gap: 0 14px;
+    padding: 13px 0; border-bottom: 1px solid var(--line);
+  }
+  .passo b {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .74rem; font-weight: 500; color: var(--alta); padding-top: 2px;
+  }
+  .passo p { margin: 3px 0 0; font-size: .82rem; color: var(--dim); line-height: 1.45; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  td, th { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-size: .84rem; text-align: left; }
+  tr:last-child td { border-bottom: 0; }
+  th {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .64rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--dimmer); font-weight: 500;
+  }
+  td.campo { color: var(--ink); font-weight: 500; width: 9.4rem; }
+  td.val {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .76rem; color: var(--adx); width: 7.4rem; white-space: nowrap;
+  }
+  td.desc { color: var(--dim); line-height: 1.45; }
+  td.num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .82rem; text-align: right; white-space: nowrap;
+  }
+  .apertada td, .apertada th { padding: 5px 12px 5px 0; }
+  .folgada td, .folgada th { padding: 11px 14px; }
+  /* slide dos parametros: conteudo centralizado em cada coluna */
+  .col-centro td, .col-centro th { text-align: center; }
+  .col-centro td.campo { width: 19%; }
+  .col-centro td.val   { width: 19%; }
+  .col-centro td.num   { width: 11%; text-align: center; }
+  .col-centro td.desc  { width: 51%; }
+  .centrada { flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 0; padding: 8px 0 12px; }
+
+  .shot { border: 1px solid var(--line); border-radius: 3px; overflow: hidden; background: var(--void); min-height: 0; }
+  .shot img { width: 100%; height: auto; display: block; }
+  .legenda {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .63rem; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--dimmer); margin-top: 9px;
+  }
+
+  .sangra {
+    display: block; margin-left: -64px; margin-right: -64px;
+    width: calc(100% + 128px); max-width: none; flex: none;
+  }
+
+  .filtro { border-left: 2px solid var(--line-2); }
+  .filtro.f1 { border-left-color: var(--alta); }
+  .filtro.f2 { border-left-color: var(--baixa); }
+  .filtro.f3 { border-left-color: var(--adx); }
+
+  .aviso {
+    margin-top: auto;
+    border-left: 2px solid var(--baixa);
+    background: rgba(255,77,106,.07);
+    padding: 11px 15px; font-size: .84rem; color: var(--dim); line-height: 1.5;
+  }
+  .aviso b { color: var(--ink); font-weight: 500; }
+  .aviso.bom { border-left-color: var(--alta); background: rgba(47,208,138,.07); }
+
+  .barra {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    display: flex; align-items: center; gap: 14px; padding: 10px 16px;
+    background: rgba(8,11,14,.92); border-bottom: 1px solid var(--line);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem; color: var(--dim);
+  }
+  .barra button {
+    font: inherit; color: var(--void); background: var(--alta);
+    border: 0; border-radius: 3px; padding: 6px 12px; cursor: pointer;
+    letter-spacing: .08em; text-transform: uppercase; font-weight: 600;
+  }
+  .barra kbd { border: 1px solid var(--line-2); border-radius: 3px; padding: 1px 5px; color: var(--ink); }
+
+  body.apresentando { overflow: hidden; background: #000; }
+  body.apresentando .barra { display: none; }
+  body.apresentando .deck { padding: 0; gap: 0; display: block; }
+  body.apresentando .slide { display: none; }
+  body.apresentando .slide.atual {
+    display: flex; position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(var(--z, 1));
+    border: 0; border-radius: 0;
+  }
+  .deck { padding-top: 68px; }
+
+  @page { size: 1280px 720px; margin: 0; }
+  @media print {
+    body { background: #fff; }
+    .barra { display: none; }
+    .deck { display: block; padding: 0; gap: 0; }
+    .slide {
+      width: 1280px; height: 720px; max-width: none;
+      border: 0; border-radius: 0;
+      break-after: page; break-inside: avoid;
+    }
+    .slide:last-child { break-after: auto; }
+  }
+
+  @media (max-width: 1340px) { .slide { transform-origin: top left; } }
+</style>
+
+<div class="barra">
+  <button id="btnApresentar">Apresentar</button>
+  <span>ou tecle <kbd>F</kbd> · navegue com <kbd>←</kbd> <kbd>→</kbd> · <kbd>Esc</kbd> sai</span>
+</div>
+
+<div class="deck">
+
+  <!-- 01 capa -->
+  <section class="slide capa">
+    <svg id="heroChart" viewBox="0 0 620 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+    <div style="max-width:640px">
+      <span class="tick">MINI ÍNDICE · WINV26 · B3</span>
+      <h1>ADX<br>Cata-vento</h1>
+      <p class="lede">Robô de negociação em MQL5 que lê qual lado do mercado está mandando — e só entra quando há força de verdade por trás.</p>
+      <div class="capa-meta">
+        <div>Aluna<b>Luisa Caetano Araujo</b></div>
+        <div>Professor<b>Dr. Alexandre Pimenta</b></div>
+        <div>Contrato<b>WINV26 · M15</b></div>
+      </div>
+      <p class="sub" style="margin-top:22px;max-width:52ch">Modelagem e Projeto de Algoritmos para o Mercado Financeiro · Ciência da Computação</p>
+    </div>
+    <div class="stamp">01</div>
+  </section>
+
+  <!-- 02 indicador -->
+  <section class="slide">
+    <div class="eyebrow">O indicador · <b>DMI / ADX</b></div>
+    <h2>O ADX não sabe se é compra ou venda</h2>
+    <p class="lede" style="max-width:104ch">A linha ADX mede <b style="color:var(--ink)">força sem direção</b> — marca 38 tanto numa alta quanto numa queda. Quem separa compra de venda são as outras duas linhas do mesmo indicador, <b class="up">DI+</b> e <b class="down">DI−</b>.</p>
+    <div class="cols c3" style="margin-top:20px">
+      <div class="card filtro f1">
+        <span class="k">Quem manda · direção</span>
+        <h3 class="up">DI+ contra DI−</h3>
+        <p>DI+ mede a força dos movimentos de alta; DI− a dos de baixa. Quem estiver por cima diz o lado da operação.</p>
+      </div>
+      <div class="card filtro f3">
+        <span class="k">Quanto manda · força</span>
+        <h3 class="amb">A linha ADX</h3>
+        <p>Diz se o movimento tem convicção. Serve para decidir <b style="color:var(--ink)">se</b> vale entrar, nunca <b style="color:var(--ink)">para onde</b>.</p>
+      </div>
+      <div class="card">
+        <span class="k">Uma chamada, três buffers</span>
+        <h3>É <code>iADX</code>, e é a única</h3>
+        <p>ADX, DI+ e DI− saem dos buffers 0, 1 e 2 do <b style="color:var(--ink)">mesmo handle</b>. É a única chamada de indicador do arquivo.</p>
+      </div>
+    </div>
+    <div class="aviso bom" style="margin-top:26px">Por isso <b>“usar o ADX” significa usar o sistema DMI inteiro</b>. Não é contornar o requisito de um indicador só — é o que o indicador é. O ADX está nomeado na lista de indicadores adequados da Seção 5 do enunciado.</div>
+    <div class="cols c2" style="margin-top:22px">
+      <div class="card"><span class="k">Sem média móvel</span><p>Busca por <code>iMA</code>, <code>MODE_SMA</code>, <code>MODE_EMA</code>, <code>MODE_SMMA</code>, <code>MODE_LWMA</code> e <code>ENUM_MA_METHOD</code> no fonte: <b style="color:var(--ink)">nenhuma ocorrência</b>.</p></div>
+      <div class="card"><span class="k">Um parâmetro só</span><p>O indicador tem um único parâmetro no robô: <code>InpDMIPeriodo</code>, igual a <b style="color:var(--ink)">12</b>. Ele vale para as três linhas.</p></div>
+    </div>
+    <div class="stamp">02</div>
+  </section>
+
+  <!-- 03 regras -->
+  <section class="slide">
+    <div class="eyebrow">A lógica · <b>entrada e saída</b></div>
+    <h2>Entra quando a tendência já se provou</h2>
+    <div class="cols c2" style="margin-top:20px">
+      <div class="card">
+        <span class="k">Entrada · as três condições</span>
+        <table class="apertada" style="margin-top:6px">
+          <tr><td class="campo up">Compra</td><td class="desc"><code>DI+ &gt; DI−</code> e <code>ADX ≥ 25</code> e <code>ADX subindo</code></td></tr>
+          <tr><td class="campo down">Venda</td><td class="desc"><code>DI− &gt; DI+</code> e <code>ADX ≥ 25</code> e <code>ADX subindo</code></td></tr>
+        </table>
+        <p style="margin-top:10px">Lido nas barras <b style="color:var(--ink)">1 e 2</b>, ambas fechadas. A barra em formação nunca é lida — o valor dela muda a cada tick e o sinal viraria loteria.</p>
+      </div>
+      <div class="card">
+        <span class="k">Saída · quatro portas, nenhuma discricionária</span>
+        <table class="apertada" style="margin-top:6px">
+          <tr><td class="campo">Take Profit</td><td class="val">375 pts</td><td class="desc">alvo atingido</td></tr>
+          <tr><td class="campo">Stop Loss</td><td class="val">150 pts</td><td class="desc">perda máxima da operação</td></tr>
+          <tr><td class="campo">Zero a zero</td><td class="val">150 pts</td><td class="desc">stop vai para a entrada, sem perda planejada</td></tr>
+          <tr><td class="campo">Encerramento</td><td class="val">17:30</td><td class="desc">nada atravessa o pregão</td></tr>
+        </table>
+        <p style="margin-top:10px">Toda ordem sai da corretora <b style="color:var(--ink)">já com stop e alvo</b> — se a conexão cair, a proteção continua no servidor.</p>
+      </div>
+    </div>
+    <div class="aviso bom" style="margin-top:22px"><b>Simetria de graça:</b> a regra de compra é a de venda com DI+ e DI− trocados. Os dois sentidos são equiprováveis <b>por construção</b>, sem nenhuma restrição artificial nos parâmetros. No teste: <b>278 compras e 255 vendas</b>.</div>
+    <div class="cols c3" style="margin-top:20px">
+      <div class="card"><span class="k">Uma por vez</span><p>Só uma posição aberta. Sem pirâmide, sem média de preço.</p></div>
+      <div class="card"><span class="k">Trava do dia</span><p>Atingiu +R$ 500 ou −R$ 300, encerra as posições e não entra mais até o pregão seguinte.</p></div>
+      <div class="card"><span class="k">Janela</span><p>Abre posição das <b style="color:var(--ink)">09:15 às 16:30</b>. Fora dela, nenhuma entrada.</p></div>
+    </div>
+    <div class="stamp">03</div>
+  </section>
+
+  <!-- 04 parametros -->
+  <section class="slide">
+    <div class="eyebrow">Parametrização · <b>tudo pela janela de propriedades</b></div>
+    <h2>Os 17 parâmetros do robô</h2>
+    <div class="centrada" style="padding-top:0">
+    <table class="col-centro">
+      <tr><th>Parâmetro</th><th>Input</th><th>Padrão</th><th>O que faz</th></tr>
+      <tr><td class="campo">Indicador</td><td class="val">InpDMIPeriodo<br>InpADXMinimo</td><td class="num">12<br>25,0</td><td class="desc">Janela de cálculo das três linhas e o limiar de força. <b style="color:var(--ink)">O 25 é valor de manual e ficou fora de qualquer otimização.</b></td></tr>
+      <tr><td class="campo">Modo de entrada</td><td class="val">InpModoEntrada</td><td class="num">ESTADO</td><td class="desc">Entrar com a tendência estabelecida, ou na virada de DI+ e DI−.</td></tr>
+      <tr><td class="campo">Confirmação · só no cruzamento</td><td class="val">InpUsarConfirmacaoADX<br>InpBarrasConfirmacao</td><td class="num">true<br>1</td><td class="desc">Governam o modo <b style="color:var(--ink)">alternativo</b> de cruzamento. No modo ESTADO não têm efeito: ali a força já faz parte da condição de entrada.</td></tr>
+      <tr><td class="campo">Lote</td><td class="val">InpLote</td><td class="num">1</td><td class="desc">Contratos por operação, normalizados ao passo do símbolo.</td></tr>
+      <tr><td class="campo">Stop Loss / Take Profit</td><td class="val">InpStopLoss<br>InpTakeProfit</td><td class="num">150<br>375</td><td class="desc">Em pontos. Enviados junto com a ordem.</td></tr>
+      <tr><td class="campo">Trava zero a zero</td><td class="val">InpTravaZeroAZero<br>InpGatilhoZeroAZero</td><td class="num">true<br>150</td><td class="desc">Move o stop para o preço de entrada depois que a operação anda a favor, eliminando a perda planejada.</td></tr>
+      <tr><td class="campo">Horários</td><td class="val">InpHoraInicio<br>InpHoraFim<br>InpHoraFechamento</td><td class="num">09:15<br>16:30<br>17:30</td><td class="desc">Janela em que pode <b style="color:var(--ink)">abrir</b> posição, e a hora em que toda posição é encerrada.</td></tr>
+      <tr><td class="campo">Trava diária</td><td class="val">InpGanhoMaxDia<br>InpPerdaMaxDia</td><td class="num">500<br>300</td><td class="desc">Ao atingir qualquer limite, encerra as posições e bloqueia até o pregão seguinte.</td></tr>
+      <tr><td class="campo">Execução</td><td class="val">InpMagic<br>InpLogDetalhado</td><td class="num">20262<br>true</td><td class="desc">Identifica as posições do robô — toda varredura filtra por ele <b style="color:var(--ink)">e</b> pelo símbolo — e liga o Diário.</td></tr>
+    </table>
+    </div>
+    <div class="stamp">04</div>
+  </section>
+
+  <!-- 05 arquitetura -->
+  <section class="slide">
+    <div class="eyebrow">Arquitetura · <b>duas velocidades</b></div>
+    <h2>Proteger é urgente. Entrar, não.</h2>
+    <p class="lede" style="max-width:88ch">O <code>OnTick</code> roda em duas cadências de propósito. Esperar a barra fechar para <b style="color:var(--ink)">decidir entrar</b> é o que tira o ruído do sinal. Esperar a barra fechar para <b style="color:var(--ink)">proteger</b> deixaria a posição desamparada por até 15 minutos.</p>
+    <div class="cols c2" style="margin-top:22px">
+      <div class="card filtro f2">
+        <span class="k">A cada tick · proteção</span>
+        <div class="passo" style="border:0;padding:7px 0"><b>01</b><div><h3>Encerramento por horário</h3><p>Passou das 17:30, fecha tudo.</p></div></div>
+        <div class="passo" style="border:0;padding:7px 0"><b>02</b><div><h3>Trava diária</h3><p>Bateu o limite, encerra e bloqueia o dia.</p></div></div>
+        <div class="passo" style="border:0;padding:7px 0"><b>03</b><div><h3>Trava no zero a zero</h3><p>Andou 150 pontos a favor, o stop sobe para a entrada.</p></div></div>
+      </div>
+      <div class="card filtro f1">
+        <span class="k">Só na barra fechada · decisão</span>
+        <div class="passo" style="border:0;padding:7px 0"><b>04</b><div><h3>Já tem posição? Janela aberta?</h3><p>Se não, registra o motivo no Diário e sai.</p></div></div>
+        <div class="passo" style="border:0;padding:7px 0"><b>05</b><div><h3>DI dominante e ADX subindo</h3><p>As três condições satisfeitas, envia a ordem.</p></div></div>
+      </div>
+    </div>
+    <div class="cols c3" style="margin-top:22px">
+      <div class="card">
+        <span class="k">Cuidados de execução</span>
+        <p>Handle criado no <code>OnInit</code> e liberado no <code>OnDeinit</code>, nunca no <code>OnTick</code>. <code>CopyBuffer</code> validado antes de usar. Preços e volumes normalizados ao tick e à distância mínima de stops.</p>
+      </div>
+      <div class="card">
+        <span class="k">Confere o retcode</span>
+        <p>O booleano de retorno diz que a requisição saiu — não que foi aceita. Quem decide é o <code>retcode</code>, e é ele que o robô verifica e registra.</p>
+      </div>
+      <div class="card">
+        <span class="k">Isolamento e validação</span>
+        <p>Toda varredura de posição filtra por Magic Number <b style="color:var(--ink)">e</b> por símbolo. Combinação inválida de parâmetros impede o robô de iniciar: o motivo vai para o Diário e o <code>OnInit</code> retorna <code>INIT_PARAMETERS_INCORRECT</code>.</p>
+      </div>
+    </div>
+    <div class="stamp">05</div>
+  </section>
+
+  <!-- 06 resultado -->
+  <section class="slide">
+    <div class="eyebrow">Resultado · <b>WINV26, todo o histórico do contrato</b></div>
+    <h2>Fator de lucro 1,36 em 533 operações</h2>
+    <p class="sub">WINV26 · M15 · modelagem OHLC por 1 minuto · depósito 100.000 BRL, sem alavancagem · 1 contrato por operação · 15/04/2026 a 08/09/2026 · 2.553 barras. Testado apenas no Strategy Tester, nunca em conta real.</p>
+    <div class="nums" style="margin-top:20px">
+      <div><div class="v up">+2.787</div><div class="l">Resultado · BRL</div></div>
+      <div><div class="v up">1,36</div><div class="l">Fator de lucro</div></div>
+      <div><div class="v">533</div><div class="l">Negociações</div></div>
+      <div><div class="v">50,84%</div><div class="l">Acerto</div></div>
+      <div><div class="v down">−450</div><div class="l">Rebaix. máx · 0,44%</div></div>
+    </div>
+    <div class="cols c3" style="margin-top:24px">
+      <div class="card filtro f1">
+        <span class="k">Opera dos dois lados</span>
+        <p><b style="color:var(--ink)">278 compras e 255 vendas.</b> O enunciado recusa robô de um sentido só, e aqui o equilíbrio não é imposto — é propriedade da regra.</p>
+      </div>
+      <div class="card">
+        <span class="k">Bruto e por operação</span>
+        <p>Lucro bruto <b style="color:var(--ink)">+10.597</b> contra perda bruta <b style="color:var(--ink)">−7.810</b>. Retorno esperado de <b style="color:var(--ink)">R$ 5,23</b> por operação.</p>
+      </div>
+      <div class="card filtro f3">
+        <span class="k">Qualidade do histórico: 55%</span>
+        <p>O WINV26 vence em outubro e só ganha liquidez em abril, então o histórico tem falhas. <b style="color:var(--ink)">75% das entradas saem na abertura exata da barra e 95% em até cinco minutos</b> — o atraso é o tempo até o primeiro tick chegar, não falha da trava de barra nova.</p>
+      </div>
+    </div>
+    <div class="stamp">06</div>
+  </section>
+
+
+  <!-- 07 evidencia -->
+  <section class="slide">
+    <div class="eyebrow">Evidência · <b>relatório do Strategy Tester</b></div>
+    <h2>O que o tester devolveu</h2>
+    <p class="sub">Curva de capital extraída do relatório gerado pelo Strategy Tester do MetaTrader 5. O relatório completo está em <code>Evidencias/Relatorio_WINV26.html</code>.</p>
+    <div class="shot" style="margin-top:20px;background:#fff;border-radius:8px;overflow:hidden">
+      <img src="data:image/png;base64,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" alt="Curva de capital do teste no WINV26" style="display:block;width:100%;border-radius:8px">
+    </div>
+    <div class="legenda">Evolução do saldo no período testado · WINV26 · M15 · 15/04 a 08/09/2026</div>
+    <div class="cols c3" style="margin-top:20px">
+      <div class="card"><span class="k">Sobe oscilando, não em linha reta</span><p>O robô acerta <b style="color:var(--ink)">50,84%</b>. Metade das operações perde — o ganho vem de as vencedoras valerem mais.</p></div>
+      <div class="card"><span class="k">O pior momento</span><p>Rebaixamento máximo de <b style="color:var(--ink)">R$ 450</b>, ou <b style="color:var(--ink)">0,44%</b> do capital.</p></div>
+      <div class="card"><span class="k">A pior sequência</span><p><b style="color:var(--ink)">7 perdas seguidas</b>, custando R$ 210 — menos da metade do rebaixamento máximo.</p></div>
+    </div>
+    <div class="stamp">07</div>
+  </section>
+
+  <!-- 08 dificuldades -->
+  <section class="slide">
+    <div class="eyebrow">Dificuldades · <b>o que deu errado e como resolvi</b></div>
+    <h2>Entrava onde ninguém manda</h2>
+    <p class="lede" style="max-width:112ch">A primeira versão entrava no <b style="color:var(--ink)">cruzamento</b> de DI+ e DI−. Para entender por que perdia, reconstruí o trajeto de cada operação.</p>
+    <div class="cols c-larga" style="margin-top:16px">
+      <div class="card">
+        <span class="k">Autópsia das 13 operações que morreram no stop</span>
+        <table style="margin-top:6px">
+          <tr><th>Andaram a favor</th><th>Quantas</th><th></th></tr>
+          <tr><td class="campo down">menos de 100 pts</td><td class="num down">8 de 13</td><td class="desc">nasceram erradas</td></tr>
+          <tr><td class="campo amb">150 pts ou mais</td><td class="num amb">5 de 13</td><td class="desc">devolveram lucro</td></tr>
+        </table>
+        <p style="margin-top:10px"><b style="color:var(--ink)">62% das perdedoras nunca andaram 100 pontos.</b> Faz sentido: no cruzamento DI+ e DI− se tocam — é o ponto em que <b style="color:var(--ink)">nenhum lado manda</b>.</p>
+      </div>
+      <div class="card filtro f1">
+        <span class="k">A correção</span>
+        <p>Trocar o gatilho: em vez de entrar na virada, entrar quando a tendência <b style="color:var(--ink)">já está estabelecida e ganhando força</b>.</p>
+        <p style="margin-top:10px">A regra veio do artigo 10715 do MQL5, implementada como está publicada. Testei <b style="color:var(--ink)">quatro combinações</b>, não centenas.</p>
+      </div>
+    </div>
+    <div class="cols c2" style="margin-top:16px">
+      <div class="card">
+        <span class="k">O efeito medido, no mesmo contrato e período</span>
+        <table class="apertada" style="margin-top:6px">
+          <tr><th>Modo de entrada</th><th>Fator de lucro</th><th>Negociações</th></tr>
+          <tr><td class="campo">Cruzamento</td><td class="num">1,23</td><td class="num down">24</td></tr>
+          <tr><td class="campo up">Estado</td><td class="num up">1,36</td><td class="num up">533</td></tr>
+        </table>
+        <p style="margin-top:10px">O que muda de patamar não é o fator — é a <b style="color:var(--ink)">amostra</b>. Vinte e quatro operações não sustentam conclusão nenhuma.</p>
+      </div>
+      <div class="card filtro f3">
+        <span class="k">O parâmetro não decidiu o resultado</span>
+        <p>Variando o período do DMI de <b style="color:var(--ink)">8 a 20</b>, com todo o resto fixo, o fator de lucro fica entre <b style="color:var(--ink)">1,24 e 1,42</b> — sete de sete, sem nenhum vale.</p>
+        <p style="margin-top:10px">O 12 foi escolhido pelo <b style="color:var(--ink)">menor rebaixamento</b> da faixa, não pelo maior fator. O critério foi risco.</p>
+      </div>
+    </div>
+    <div class="stamp">08</div>
+  </section>
+
+  <!-- 09 encerramento -->
+  <section class="slide capa sem-rail">
+    <svg id="heroFim" viewBox="0 0 620 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true"
+         style="position:absolute;right:0;top:0;height:100%;width:54%;opacity:.42"></svg>
+    <div style="max-width:660px">
+      <span class="tick">ADX CATA-VENTO · WINV26 · B3</span>
+      <h1 style="font-size:4.4rem">Agradeço<br>a atenção</h1>
+      <p class="lede" style="margin-top:18px">Fico à disposição para as perguntas.</p>
+      <div class="capa-meta" style="margin-top:30px">
+        <div>Aluna<b>Luisa Caetano Araujo</b></div>
+        <div>Professor<b>Dr. Alexandre Pimenta</b></div>
+      </div>
+      <p class="sub" style="margin-top:20px;max-width:52ch">Modelagem e Projeto de Algoritmos para o Mercado Financeiro · Ciência da Computação</p>
+    </div>
+    <div class="stamp">09</div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  function serie(n, semente, base, vol) {
+    let s = semente, preco = base;
+    const rnd = () => (s = (s * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
+    const out = [];
+    for (let i = 0; i < n; i++) {
+      const abre = preco;
+      const fecha = abre + (rnd() - 0.47) * vol;
+      out.push({ abre, fecha,
+        alta: Math.max(abre, fecha) + rnd() * vol * 0.45,
+        baixa: Math.min(abre, fecha) - rnd() * vol * 0.45 });
+      preco = fecha;
+    }
+    return out;
+  }
+
+  function desenhar(svg, velas, opt) {
+    const W = opt.w, H = opt.h, pad = opt.pad || 8;
+    const todos = velas.flatMap(v => [v.alta, v.baixa]);
+    const max = Math.max(...todos), min = Math.min(...todos);
+    const y = p => pad + (max - p) / (max - min || 1) * (H - pad * 2);
+    const larg = W / velas.length;
+    const corpo = Math.max(2, larg * 0.58);
+    let d = '';
+    velas.forEach((v, i) => {
+      const cx = i * larg + larg / 2;
+      const sobe = v.fecha >= v.abre;
+      const cor = sobe ? '#2FD08A' : '#FF4D6A';
+      const yA = y(Math.max(v.abre, v.fecha));
+      const alt = Math.max(1.5, y(Math.min(v.abre, v.fecha)) - yA);
+      d += `<line x1="${cx.toFixed(1)}" y1="${y(v.alta).toFixed(1)}" x2="${cx.toFixed(1)}" y2="${y(v.baixa).toFixed(1)}" stroke="${cor}" stroke-width="1" opacity=".62"/>`;
+      d += `<rect x="${(cx - corpo / 2).toFixed(1)}" y="${yA.toFixed(1)}" width="${corpo.toFixed(1)}" height="${alt.toFixed(1)}" fill="${sobe ? cor : 'none'}" stroke="${cor}" stroke-width="1.1" opacity="${sobe ? '.9' : '1'}"/>`;
+    });
+    svg.innerHTML = d + (opt.extra || '');
+  }
+
+  const hero = document.getElementById('heroChart');
+  if (hero) desenhar(hero, serie(44, 20260102, 132000, 900), { w: 620, h: 720, pad: 40 });
+
+  const heroFim = document.getElementById('heroFim');
+  if (heroFim) desenhar(heroFim, serie(44, 20260821, 132000, 900), { w: 620, h: 720, pad: 40 });
+
+  // O gráfico do slide 02 é SVG estático, desenhado a partir de dados reais
+  // exportados do WINV26 (ver MQL5/Scripts/ExportarBarrasDMI.mq5).
+
+  // modo apresentacao
+  (function () {
+    const corpo = document.body;
+    const slides = [...document.querySelectorAll('.slide')];
+    let i = 0;
+
+    function escalar() {
+      if (!corpo.classList.contains('apresentando')) return;
+      const z = Math.min(innerWidth / 1280, innerHeight / 720);
+      document.documentElement.style.setProperty('--z', z);
+    }
+    function mostrar(n) {
+      i = Math.max(0, Math.min(slides.length - 1, n));
+      slides.forEach((s, k) => s.classList.toggle('atual', k === i));
+      escalar();
+    }
+    function entrar() {
+      corpo.classList.add('apresentando');
+      mostrar(i);
+      const pedir = document.documentElement.requestFullscreen;
+      if (pedir) pedir.call(document.documentElement).catch(() => {});
+    }
+    function sair() {
+      corpo.classList.remove('apresentando');
+      slides.forEach(s => s.classList.remove('atual'));
+      if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
+      slides[i].scrollIntoView({ block: 'center' });
+    }
+
+    document.getElementById('btnApresentar').addEventListener('click', entrar);
+
+    addEventListener('keydown', e => {
+      if (!corpo.classList.contains('apresentando')) {
+        if (e.key === 'f' || e.key === 'F') {
+          const meio = innerHeight / 2;
+          let melhor = 0, dist = Infinity;
+          slides.forEach((s, k) => {
+            const r = s.getBoundingClientRect();
+            const dd = Math.abs(r.top + r.height / 2 - meio);
+            if (dd < dist) { dist = dd; melhor = k; }
+          });
+          i = melhor; entrar(); e.preventDefault();
+        }
+        return;
+      }
+      if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { mostrar(i + 1); e.preventDefault(); }
+      else if (['ArrowLeft', 'PageUp'].includes(e.key)) { mostrar(i - 1); e.preventDefault(); }
+      else if (e.key === 'Home') { mostrar(0); e.preventDefault(); }
+      else if (e.key === 'End') { mostrar(slides.length - 1); e.preventDefault(); }
+      else if (e.key === 'Escape') { sair(); }
+    });
+
+    addEventListener('resize', escalar);
+    addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement && corpo.classList.contains('apresentando')) sair();
+    });
+  })();
+
+  // trilho de candles: um por slide
+  const slides = [...document.querySelectorAll('.slide')];
+  slides.forEach((s, idx) => {
+    const rail = document.createElement('div');
+    rail.className = 'rail';
+    rail.innerHTML = slides.map((_, j) =>
+      `<i class="${j < idx ? 'done' : j === idx ? 'here' : ''}"></i>`).join('');
+    s.appendChild(rail);
+  });
+})();
+</script>

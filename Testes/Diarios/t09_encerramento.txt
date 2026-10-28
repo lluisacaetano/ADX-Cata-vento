@@ -1,0 +1,969 @@
+CS	0	15:30:34.816	Startup	MetaTester 5 build 6182, 5 Sep 2026
+CS	0	15:30:34.818	Startup	Windows 11 build 22000 on Wine 11.1 Darwin 25.6.0, 10 x VirtualApple @ 2.50GHz, x64, 4 / 15 Gb memory, 270 / 460 Gb disk, GMT-3
+CS	0	15:30:34.823	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	15:30:34.828	Startup	cloud network mode is off
+CS	0	15:30:34.829	Startup	initialization finished
+CS	0	15:30:35.150	127.0.0.1	login (build 6182)
+CS	0	15:30:35.184	Network	6692 bytes of account info loaded
+CS	0	15:30:35.184	Network	1478 bytes of tester parameters loaded
+CS	0	15:30:35.185	Network	10436 bytes of input parameters loaded
+CS	0	15:30:35.320	Network	598926 bytes of symbols list loaded (72445 symbols)
+CS	0	15:30:35.321	Tester	expert file added: Experts\Trabalho01\Robo_ADX_WIN.ex5. 50607 bytes loaded
+CS	0	15:30:35.325	Tester	4153 Mb available, 51 blocks set for ticks generating
+CS	0	15:30:35.325	Tester	initial deposit 100000.00 BRL, leverage 1:1
+CS	0	15:30:35.328	Tester	successfully initialized
+CS	0	15:30:35.328	Network	453 Kb of total initialization data received
+CS	0	15:30:35.328	Tester	VirtualApple @ 2.50GHz, 16383 MB
+CS	0	15:30:35.350	Symbols	WIN_CONTINUO: symbol to be synchronized
+CS	0	15:30:35.352	Symbols	WIN_CONTINUO: symbol synchronized, 3720 bytes of symbol info received
+CS	0	15:30:35.359	History	WIN_CONTINUO: load 39 bytes of history data to synchronize in 0:00:00.002
+CS	0	15:30:35.359	History	WIN_CONTINUO: history synchronized from 2024.01.02 to 2026.08.21
+CS	0	15:30:35.378	History	WIN_CONTINUO,M15: history cache allocated for 15144 bars and contains 10945 bars from 2025.01.02 09:00 to 2026.02.27 18:15
+CS	0	15:30:35.378	History	WIN_CONTINUO,M15: history begins from 2025.01.02 09:00
+CS	0	15:30:35.380	Tester	WIN_CONTINUO,M15 (XPMT5-DEMO): 1 minutes OHLC ticks generating
+CS	0	15:30:35.380	Tester	WIN_CONTINUO,M15: testing of Experts\Trabalho01\Robo_ADX_WIN.ex5 from 2026.03.02 00:00 to 2026.04.30 00:00 started with inputs:
+CS	0	15:30:35.380	Tester	  Indicador (DMI / ADX)=
+CS	0	15:30:35.380	Tester	  InpDMIPeriodo=12
+CS	0	15:30:35.380	Tester	  Confirmacao de forca (ADX)=
+CS	0	15:30:35.380	Tester	  InpUsarConfirmacaoADX=true
+CS	0	15:30:35.380	Tester	  InpADXMinimo=25.0
+CS	0	15:30:35.380	Tester	  InpBarrasConfirmacao=1
+CS	0	15:30:35.380	Tester	  Gestao de risco=
+CS	0	15:30:35.380	Tester	  InpLote=1.0
+CS	0	15:30:35.380	Tester	  InpStopLoss=3000
+CS	0	15:30:35.380	Tester	  InpTakeProfit=5000
+CS	0	15:30:35.380	Tester	  Horarios (HH:MM, hora do servidor)=
+CS	0	15:30:35.380	Tester	  InpHoraInicio=09:15
+CS	0	15:30:35.380	Tester	  InpHoraFim=16:30
+CS	0	15:30:35.380	Tester	  InpHoraFechamento=17:30
+CS	0	15:30:35.380	Tester	  Trava diaria de resultado=
+CS	0	15:30:35.380	Tester	  InpGanhoMaxDia=500.0
+CS	0	15:30:35.380	Tester	  InpPerdaMaxDia=300.0
+CS	0	15:30:35.380	Tester	  Execucao=
+CS	0	15:30:35.380	Tester	  InpMagic=20262
+CS	0	15:30:35.380	Tester	  InpLogDetalhado=true
+CS	0	15:30:35.407	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 00:00:00   ADX Bussola iniciado em WIN_CONTINUO | DMI(12) | lote 1.00 | SL 3000 / TP 5000 pts
+CS	0	15:30:35.407	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 00:00:00   Confirmacao por ADX LIGADA: exige ADX >= 25.0 e subindo, ate 1 barra(s) apos o cruzamento
+CS	0	15:30:35.407	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 00:00:00   Janela 09:15 as 16:30 | encerramento 17:30 | limites diarios +500.00 / -300.00
+CS	0	15:30:35.418	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.423	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 12:00:00   [ARMADO] COMPRA | DI+ 25.50 DI- 18.16 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.423	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 12:00:00   [RECUSA] ADX 28.1 nao esta subindo (anterior 30.2): entrada nao confirmada
+CS	0	15:30:35.424	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 12:15:00   [SINAL] COMPRA | DI+ 28.13 DI- 15.37 | ADX 28.31 subindo (anterior 28.12) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.426	Trade	2026.03.02 12:15:00   exchange buy 1 WIN_CONTINUO at 192000 sl: 189000 tp: 197000 (191995 / 192000 / 191995)
+CS	0	15:30:35.427	Trades	2026.03.02 12:15:00   deal #2 buy 1 WIN_CONTINUO at 192000 done (based on order #2)
+CS	0	15:30:35.427	Trade	2026.03.02 12:15:00   deal performed [#2 buy 1 WIN_CONTINUO at 192000]
+CS	0	15:30:35.427	Trade	2026.03.02 12:15:00   order performed buy 1 at 192000 [#2 buy 1 WIN_CONTINUO at 192000]
+CS	0	15:30:35.429	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 12:15:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 189000 tp: 197000 [done]
+CS	0	15:30:35.429	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 12:15:00   COMPRA EXECUTADA | preco 192000 | lote 1.00 | SL 189000 (3000 pts) | TP 197000 (5000 pts)
+CS	0	15:30:35.430	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 12:30:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.440	Trade	2026.03.02 17:30:00   exchange sell 1 WIN_CONTINUO at 192005, close #2 (192005 / 192010 / 192005)
+CS	0	15:30:35.440	Trades	2026.03.02 17:30:00   deal #3 sell 1 WIN_CONTINUO at 192005 done (based on order #3)
+CS	0	15:30:35.440	Trade	2026.03.02 17:30:00   deal performed [#3 sell 1 WIN_CONTINUO at 192005]
+CS	0	15:30:35.440	Trade	2026.03.02 17:30:00   order performed sell 1 at 192005 [#3 sell 1 WIN_CONTINUO at 192005]
+CS	0	15:30:35.440	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.441	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 17:30:00   POSICAO FECHADA | ticket 2 | motivo: horario de encerramento
+CS	0	15:30:35.441	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.442	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:02:00   === Novo pregao: 2026.03.03 | travas do dia liberadas ===
+CS	0	15:30:35.442	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:02:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.443	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:15:00   [ARMADO] VENDA | DI+ 10.05 DI- 23.31 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.443	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:15:00   [SINAL] VENDA | DI+ 10.05 DI- 23.31 | ADX 26.29 subindo (anterior 23.84) | 0 barra(s) apos o cruzamento
+CS	0	15:30:35.443	Trade	2026.03.03 09:15:00   exchange sell 1 WIN_CONTINUO at 188125 sl: 191125 tp: 183125 (188125 / 188130 / 188125)
+CS	0	15:30:35.443	Trades	2026.03.03 09:15:00   deal #4 sell 1 WIN_CONTINUO at 188125 done (based on order #4)
+CS	0	15:30:35.443	Trade	2026.03.03 09:15:00   deal performed [#4 sell 1 WIN_CONTINUO at 188125]
+CS	0	15:30:35.443	Trade	2026.03.03 09:15:00   order performed sell 1 at 188125 [#4 sell 1 WIN_CONTINUO at 188125]
+CS	0	15:30:35.443	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:15:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 191125 tp: 183125 [done]
+CS	0	15:30:35.443	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:15:00   VENDA EXECUTADA | preco 188125 | lote 1.00 | SL 191125 (3000 pts) | TP 183125 (5000 pts)
+CS	0	15:30:35.443	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 09:30:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.446	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 10:48:40   TRAVA DIARIA | ganho maximo atingido: R$ 519.00 (limite R$ 500.00)
+CS	0	15:30:35.446	Trade	2026.03.03 10:48:40   exchange buy 1 WIN_CONTINUO at 185535, close #4 (185530 / 185535 / 185530)
+CS	0	15:30:35.446	Trades	2026.03.03 10:48:40   deal #5 buy 1 WIN_CONTINUO at 185535 done (based on order #5)
+CS	0	15:30:35.446	Trade	2026.03.03 10:48:40   deal performed [#5 buy 1 WIN_CONTINUO at 185535]
+CS	0	15:30:35.446	Trade	2026.03.03 10:48:40   order performed buy 1 at 185535 [#5 buy 1 WIN_CONTINUO at 185535]
+CS	0	15:30:35.446	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 10:48:40   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.446	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 10:48:40   POSICAO FECHADA | ticket 4 | motivo: ganho maximo diario
+CS	0	15:30:35.446	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 10:48:40   [RECUSA] trava diaria atingida: sem novas entradas ate o proximo pregao
+CS	0	15:30:35.458	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.03 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.459	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 09:00:00   === Novo pregao: 2026.03.04 | travas do dia liberadas ===
+CS	0	15:30:35.460	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.460	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 09:15:00   [ARMADO] COMPRA | DI+ 23.78 DI- 22.39 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.460	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 09:15:00   [RECUSA] ADX 21.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.460	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 09:30:00   [RECUSA] ADX 18.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.460	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.464	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 11:45:00   [ARMADO] VENDA | DI+ 16.76 DI- 27.43 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.464	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 11:45:00   [RECUSA] ADX 23.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.465	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 12:00:00   [SINAL] VENDA | DI+ 14.18 DI- 32.51 | ADX 26.04 subindo (anterior 23.64) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.465	Trade	2026.03.04 12:00:00   exchange sell 1 WIN_CONTINUO at 186550 sl: 189550 tp: 181550 (186550 / 186555 / 186550)
+CS	0	15:30:35.465	Trades	2026.03.04 12:00:00   deal #6 sell 1 WIN_CONTINUO at 186550 done (based on order #6)
+CS	0	15:30:35.465	Trade	2026.03.04 12:00:00   deal performed [#6 sell 1 WIN_CONTINUO at 186550]
+CS	0	15:30:35.465	Trade	2026.03.04 12:00:00   order performed sell 1 at 186550 [#6 sell 1 WIN_CONTINUO at 186550]
+CS	0	15:30:35.465	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 12:00:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 189550 tp: 181550 [done]
+CS	0	15:30:35.465	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 12:00:00   VENDA EXECUTADA | preco 186550 | lote 1.00 | SL 189550 (3000 pts) | TP 181550 (5000 pts)
+CS	0	15:30:35.465	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 12:15:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.472	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 15:48:40   TRAVA DIARIA | perda maxima atingida: R$ -302.00 (limite R$ -300.00)
+CS	0	15:30:35.472	Trade	2026.03.04 15:48:40   exchange buy 1 WIN_CONTINUO at 188065, close #6 (188060 / 188065 / 188060)
+CS	0	15:30:35.472	Trades	2026.03.04 15:48:40   deal #7 buy 1 WIN_CONTINUO at 188065 done (based on order #7)
+CS	0	15:30:35.472	Trade	2026.03.04 15:48:40   deal performed [#7 buy 1 WIN_CONTINUO at 188065]
+CS	0	15:30:35.472	Trade	2026.03.04 15:48:40   order performed buy 1 at 188065 [#7 buy 1 WIN_CONTINUO at 188065]
+CS	0	15:30:35.472	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 15:48:40   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.472	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 15:48:40   POSICAO FECHADA | ticket 6 | motivo: perda maxima diaria
+CS	0	15:30:35.472	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 15:48:40   [RECUSA] trava diaria atingida: sem novas entradas ate o proximo pregao
+CS	0	15:30:35.475	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.04 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.476	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.05 09:03:00   === Novo pregao: 2026.03.05 | travas do dia liberadas ===
+CS	0	15:30:35.476	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.05 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.490	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.05 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.492	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 09:03:00   === Novo pregao: 2026.03.06 | travas do dia liberadas ===
+CS	0	15:30:35.492	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.495	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 10:30:00   [ARMADO] COMPRA | DI+ 24.93 DI- 20.91 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.495	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 10:30:00   [RECUSA] ADX 23.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.495	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 10:45:00   [RECUSA] ADX 23.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.495	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.495	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 11:00:00   [ARMADO] VENDA | DI+ 23.32 DI- 28.41 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.495	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 11:00:00   [RECUSA] ADX 21.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.496	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 11:15:00   [RECUSA] ADX 21.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.496	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 11:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.498	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 12:30:00   [ARMADO] COMPRA | DI+ 19.74 DI- 17.21 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.498	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 12:30:00   [RECUSA] ADX 16.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.498	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 12:45:00   [RECUSA] ADX 16.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.498	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 12:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.501	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 14:15:00   [ARMADO] VENDA | DI+ 13.24 DI- 15.99 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.501	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 14:15:00   [RECUSA] ADX 18.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.501	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 14:30:00   [ARMADO] COMPRA | DI+ 16.87 DI- 13.53 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.501	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 14:30:00   [RECUSA] ADX 17.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.501	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 14:45:00   [ARMADO] VENDA | DI+ 14.28 DI- 19.91 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.501	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 14:45:00   [RECUSA] ADX 17.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.502	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 15:00:00   [RECUSA] ADX 18.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.502	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 15:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.502	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 15:15:00   [ARMADO] COMPRA | DI+ 17.76 DI- 16.47 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.502	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 15:15:00   [RECUSA] ADX 15.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.503	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 15:30:00   [RECUSA] ADX 17.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.503	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 15:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.505	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.506	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.06 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.508	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 09:00:00   === Novo pregao: 2026.03.09 | travas do dia liberadas ===
+CS	0	15:30:35.508	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.510	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 10:30:00   [ARMADO] COMPRA | DI+ 20.56 DI- 18.27 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.510	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 10:30:00   [RECUSA] ADX 25.5 nao esta subindo (anterior 29.0): entrada nao confirmada
+CS	0	15:30:35.511	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 10:45:00   [RECUSA] ADX 22.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.511	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.511	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 11:00:00   [ARMADO] VENDA | DI+ 14.72 DI- 18.36 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.511	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 11:00:00   [RECUSA] ADX 20.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.512	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 11:15:00   [RECUSA] ADX 22.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.512	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 11:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.513	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 12:15:00   [ARMADO] COMPRA | DI+ 19.49 DI- 13.74 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.513	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 12:15:00   [RECUSA] ADX 23.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.514	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 12:30:00   [SINAL] COMPRA | DI+ 30.77 DI- 11.62 | ADX 27.13 subindo (anterior 23.85) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.514	Trade	2026.03.09 12:30:00   exchange buy 1 WIN_CONTINUO at 182570 sl: 179570 tp: 187570 (182565 / 182570 / 182565)
+CS	0	15:30:35.514	Trades	2026.03.09 12:30:00   deal #8 buy 1 WIN_CONTINUO at 182570 done (based on order #8)
+CS	0	15:30:35.514	Trade	2026.03.09 12:30:00   deal performed [#8 buy 1 WIN_CONTINUO at 182570]
+CS	0	15:30:35.514	Trade	2026.03.09 12:30:00   order performed buy 1 at 182570 [#8 buy 1 WIN_CONTINUO at 182570]
+CS	0	15:30:35.514	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 12:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 179570 tp: 187570 [done]
+CS	0	15:30:35.514	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 12:30:00   COMPRA EXECUTADA | preco 182570 | lote 1.00 | SL 179570 (3000 pts) | TP 187570 (5000 pts)
+CS	0	15:30:35.514	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 12:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.523	Trade	2026.03.09 17:30:00   exchange sell 1 WIN_CONTINUO at 183915, close #8 (183915 / 183920 / 183915)
+CS	0	15:30:35.523	Trades	2026.03.09 17:30:00   deal #9 sell 1 WIN_CONTINUO at 183915 done (based on order #9)
+CS	0	15:30:35.523	Trade	2026.03.09 17:30:00   deal performed [#9 sell 1 WIN_CONTINUO at 183915]
+CS	0	15:30:35.523	Trade	2026.03.09 17:30:00   order performed sell 1 at 183915 [#9 sell 1 WIN_CONTINUO at 183915]
+CS	0	15:30:35.523	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.523	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 17:30:00   POSICAO FECHADA | ticket 8 | motivo: horario de encerramento
+CS	0	15:30:35.523	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.09 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.525	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:00:00   === Novo pregao: 2026.03.10 | travas do dia liberadas ===
+CS	0	15:30:35.525	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.525	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:15:00   [ARMADO] VENDA | DI+ 14.94 DI- 19.02 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.525	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:15:00   [RECUSA] ADX 25.5 nao esta subindo (anterior 28.0): entrada nao confirmada
+CS	0	15:30:35.526	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:30:00   [RECUSA] ADX 23.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.526	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.526	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:45:00   [ARMADO] COMPRA | DI+ 16.18 DI- 13.62 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.526	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 09:45:00   [RECUSA] ADX 21.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.527	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 10:00:00   [RECUSA] ADX 24.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.527	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 10:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.528	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 10:30:00   [ARMADO] VENDA | DI+ 19.09 DI- 22.26 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.528	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 10:30:00   [RECUSA] ADX 19.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.528	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 10:45:00   [ARMADO] COMPRA | DI+ 21.33 DI- 18.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.528	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 10:45:00   [RECUSA] ADX 17.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.529	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 11:00:00   [ARMADO] VENDA | DI+ 18.05 DI- 23.05 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.529	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 11:00:00   [RECUSA] ADX 16.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.529	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 11:15:00   [RECUSA] ADX 18.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.529	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 11:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.530	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 11:45:00   [ARMADO] COMPRA | DI+ 30.58 DI- 19.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.530	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 11:45:00   [RECUSA] ADX 17.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.531	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 12:00:00   [RECUSA] ADX 21.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.531	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 12:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.536	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 15:30:00   [ARMADO] VENDA | DI+ 22.62 DI- 24.70 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.536	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 15:30:00   [RECUSA] ADX 36.9 nao esta subindo (anterior 42.8): entrada nao confirmada
+CS	0	15:30:35.537	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 15:45:00   [RECUSA] ADX 31.9 nao esta subindo (anterior 36.9): entrada nao confirmada
+CS	0	15:30:35.537	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 15:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.538	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.540	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.10 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.541	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 09:00:00   === Novo pregao: 2026.03.11 | travas do dia liberadas ===
+CS	0	15:30:35.541	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.544	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 10:45:00   [ARMADO] COMPRA | DI+ 35.85 DI- 25.72 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.544	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 10:45:00   [RECUSA] ADX 33.7 nao esta subindo (anterior 36.8): entrada nao confirmada
+CS	0	15:30:35.544	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 11:00:00   [RECUSA] ADX 32.4 nao esta subindo (anterior 33.7): entrada nao confirmada
+CS	0	15:30:35.544	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 11:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.547	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 12:30:00   [ARMADO] VENDA | DI+ 20.14 DI- 26.76 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.547	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 12:30:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.547	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 12:45:00   [RECUSA] ADX 24.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.547	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 12:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.552	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 15:45:00   [ARMADO] COMPRA | DI+ 18.44 DI- 16.76 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.552	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 15:45:00   [RECUSA] ADX 29.7 nao esta subindo (anterior 34.3): entrada nao confirmada
+CS	0	15:30:35.552	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:00:00   [RECUSA] ADX 27.8 nao esta subindo (anterior 29.7): entrada nao confirmada
+CS	0	15:30:35.552	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.553	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:15:00   [ARMADO] VENDA | DI+ 16.95 DI- 21.12 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.553	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:15:00   [RECUSA] ADX 25.2 nao esta subindo (anterior 27.8): entrada nao confirmada
+CS	0	15:30:35.553	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:30:00   [ARMADO] COMPRA | DI+ 21.02 DI- 17.87 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.553	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:30:00   [RECUSA] ADX 22.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.553	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.555	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.11 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.556	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 09:00:00   [DESARMADO] COMPRA armado no pregao anterior: cruzamento nao atravessa o pregao
+CS	0	15:30:35.556	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 09:00:00   === Novo pregao: 2026.03.12 | travas do dia liberadas ===
+CS	0	15:30:35.556	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.563	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 13:30:00   [ARMADO] COMPRA | DI+ 14.95 DI- 12.36 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.563	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 13:30:00   [RECUSA] ADX 32.6 nao esta subindo (anterior 36.8): entrada nao confirmada
+CS	0	15:30:35.564	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 13:45:00   [RECUSA] ADX 28.2 nao esta subindo (anterior 32.6): entrada nao confirmada
+CS	0	15:30:35.564	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.566	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 15:00:00   [ARMADO] VENDA | DI+ 10.53 DI- 22.71 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.566	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 15:00:00   [RECUSA] ADX 24.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.566	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 15:15:00   [SINAL] VENDA | DI+ 8.91 DI- 19.21 | ADX 26.49 subindo (anterior 24.65) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.566	Trade	2026.03.12 15:15:00   exchange sell 1 WIN_CONTINUO at 181595 sl: 184595 tp: 176595 (181595 / 181600 / 181595)
+CS	0	15:30:35.566	Trades	2026.03.12 15:15:00   deal #10 sell 1 WIN_CONTINUO at 181595 done (based on order #10)
+CS	0	15:30:35.566	Trade	2026.03.12 15:15:00   deal performed [#10 sell 1 WIN_CONTINUO at 181595]
+CS	0	15:30:35.566	Trade	2026.03.12 15:15:00   order performed sell 1 at 181595 [#10 sell 1 WIN_CONTINUO at 181595]
+CS	0	15:30:35.566	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 15:15:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 184595 tp: 176595 [done]
+CS	0	15:30:35.566	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 15:15:00   VENDA EXECUTADA | preco 181595 | lote 1.00 | SL 184595 (3000 pts) | TP 176595 (5000 pts)
+CS	0	15:30:35.567	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 15:30:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.570	Trade	2026.03.12 17:30:00   exchange buy 1 WIN_CONTINUO at 181215, close #10 (181210 / 181215 / 181210)
+CS	0	15:30:35.570	Trades	2026.03.12 17:30:00   deal #11 buy 1 WIN_CONTINUO at 181215 done (based on order #11)
+CS	0	15:30:35.570	Trade	2026.03.12 17:30:00   deal performed [#11 buy 1 WIN_CONTINUO at 181215]
+CS	0	15:30:35.570	Trade	2026.03.12 17:30:00   order performed buy 1 at 181215 [#11 buy 1 WIN_CONTINUO at 181215]
+CS	0	15:30:35.570	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 17:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.570	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 17:30:00   POSICAO FECHADA | ticket 10 | motivo: horario de encerramento
+CS	0	15:30:35.570	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.12 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.572	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 09:00:00   === Novo pregao: 2026.03.13 | travas do dia liberadas ===
+CS	0	15:30:35.572	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.572	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 09:15:00   [ARMADO] COMPRA | DI+ 18.93 DI- 14.65 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.572	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 09:15:00   [RECUSA] ADX 31.1 nao esta subindo (anterior 34.4): entrada nao confirmada
+CS	0	15:30:35.573	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 09:30:00   [RECUSA] ADX 28.5 nao esta subindo (anterior 31.1): entrada nao confirmada
+CS	0	15:30:35.573	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.576	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 11:30:00   [ARMADO] VENDA | DI+ 10.82 DI- 23.59 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.576	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 11:30:00   [SINAL] VENDA | DI+ 10.82 DI- 23.59 | ADX 29.26 subindo (anterior 27.83) | 0 barra(s) apos o cruzamento
+CS	0	15:30:35.576	Trade	2026.03.13 11:30:00   exchange sell 1 WIN_CONTINUO at 181780 sl: 184780 tp: 176780 (181780 / 181785 / 181780)
+CS	0	15:30:35.576	Trades	2026.03.13 11:30:00   deal #12 sell 1 WIN_CONTINUO at 181780 done (based on order #12)
+CS	0	15:30:35.576	Trade	2026.03.13 11:30:00   deal performed [#12 sell 1 WIN_CONTINUO at 181780]
+CS	0	15:30:35.576	Trade	2026.03.13 11:30:00   order performed sell 1 at 181780 [#12 sell 1 WIN_CONTINUO at 181780]
+CS	0	15:30:35.576	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 11:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 184780 tp: 176780 [done]
+CS	0	15:30:35.576	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 11:30:00   VENDA EXECUTADA | preco 181780 | lote 1.00 | SL 184780 (3000 pts) | TP 176780 (5000 pts)
+CS	0	15:30:35.576	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 11:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.585	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 16:47:20   TRAVA DIARIA | ganho maximo atingido: R$ 504.00 (limite R$ 500.00)
+CS	0	15:30:35.585	Trade	2026.03.13 16:47:20   exchange buy 1 WIN_CONTINUO at 179265, close #12 (179260 / 179265 / 179260)
+CS	0	15:30:35.585	Trades	2026.03.13 16:47:20   deal #13 buy 1 WIN_CONTINUO at 179265 done (based on order #13)
+CS	0	15:30:35.586	Trade	2026.03.13 16:47:20   deal performed [#13 buy 1 WIN_CONTINUO at 179265]
+CS	0	15:30:35.586	Trade	2026.03.13 16:47:20   order performed buy 1 at 179265 [#13 buy 1 WIN_CONTINUO at 179265]
+CS	0	15:30:35.586	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 16:47:20   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.586	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 16:47:20   POSICAO FECHADA | ticket 12 | motivo: ganho maximo diario
+CS	0	15:30:35.586	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 16:47:20   [RECUSA] trava diaria atingida: sem novas entradas ate o proximo pregao
+CS	0	15:30:35.587	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.13 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.588	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:00:00   === Novo pregao: 2026.03.16 | travas do dia liberadas ===
+CS	0	15:30:35.588	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.589	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:15:00   [ARMADO] COMPRA | DI+ 26.41 DI- 19.70 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.589	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:15:00   [RECUSA] ADX 28.9 nao esta subindo (anterior 31.5): entrada nao confirmada
+CS	0	15:30:35.589	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:30:00   [SINAL] COMPRA | DI+ 32.11 DI- 16.67 | ADX 29.34 subindo (anterior 28.92) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.589	Trade	2026.03.16 09:30:00   exchange buy 1 WIN_CONTINUO at 182855 sl: 179855 tp: 187855 (182850 / 182855 / 182850)
+CS	0	15:30:35.589	Trades	2026.03.16 09:30:00   deal #14 buy 1 WIN_CONTINUO at 182855 done (based on order #14)
+CS	0	15:30:35.589	Trade	2026.03.16 09:30:00   deal performed [#14 buy 1 WIN_CONTINUO at 182855]
+CS	0	15:30:35.589	Trade	2026.03.16 09:30:00   order performed buy 1 at 182855 [#14 buy 1 WIN_CONTINUO at 182855]
+CS	0	15:30:35.589	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 179855 tp: 187855 [done]
+CS	0	15:30:35.589	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:30:00   COMPRA EXECUTADA | preco 182855 | lote 1.00 | SL 179855 (3000 pts) | TP 187855 (5000 pts)
+CS	0	15:30:35.590	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 09:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.597	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 13:34:40   TRAVA DIARIA | perda maxima atingida: R$ -307.00 (limite R$ -300.00)
+CS	0	15:30:35.597	Trade	2026.03.16 13:34:40   exchange sell 1 WIN_CONTINUO at 181320, close #14 (181320 / 181325 / 181320)
+CS	0	15:30:35.597	Trades	2026.03.16 13:34:40   deal #15 sell 1 WIN_CONTINUO at 181320 done (based on order #15)
+CS	0	15:30:35.597	Trade	2026.03.16 13:34:40   deal performed [#15 sell 1 WIN_CONTINUO at 181320]
+CS	0	15:30:35.597	Trade	2026.03.16 13:34:40   order performed sell 1 at 181320 [#15 sell 1 WIN_CONTINUO at 181320]
+CS	0	15:30:35.597	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 13:34:40   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.597	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 13:34:40   POSICAO FECHADA | ticket 14 | motivo: perda maxima diaria
+CS	0	15:30:35.597	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 13:34:40   [RECUSA] trava diaria atingida: sem novas entradas ate o proximo pregao
+CS	0	15:30:35.604	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.16 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.605	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 09:00:00   === Novo pregao: 2026.03.17 | travas do dia liberadas ===
+CS	0	15:30:35.605	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.608	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 10:30:00   [ARMADO] COMPRA | DI+ 18.60 DI- 15.83 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.608	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 10:30:00   [RECUSA] ADX 23.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.608	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 10:45:00   [RECUSA] ADX 21.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.608	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.610	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 11:45:00   [ARMADO] VENDA | DI+ 17.93 DI- 21.25 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.610	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 11:45:00   [RECUSA] ADX 22.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.610	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 12:00:00   [RECUSA] ADX 20.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.610	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 12:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.612	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 13:30:00   [ARMADO] COMPRA | DI+ 22.66 DI- 20.79 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.613	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 13:30:00   [RECUSA] ADX 28.3 nao esta subindo (anterior 32.6): entrada nao confirmada
+CS	0	15:30:35.613	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 13:45:00   [RECUSA] ADX 24.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.613	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.616	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 15:45:00   [ARMADO] VENDA | DI+ 16.77 DI- 27.64 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.616	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 15:45:00   [RECUSA] ADX 24.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.617	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 16:00:00   [SINAL] VENDA | DI+ 14.19 DI- 24.16 | ADX 25.03 subindo (anterior 24.86) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.617	Trade	2026.03.17 16:00:00   exchange sell 1 WIN_CONTINUO at 182370 sl: 185370 tp: 177370 (182370 / 182375 / 182370)
+CS	0	15:30:35.617	Trades	2026.03.17 16:00:00   deal #16 sell 1 WIN_CONTINUO at 182370 done (based on order #16)
+CS	0	15:30:35.617	Trade	2026.03.17 16:00:00   deal performed [#16 sell 1 WIN_CONTINUO at 182370]
+CS	0	15:30:35.617	Trade	2026.03.17 16:00:00   order performed sell 1 at 182370 [#16 sell 1 WIN_CONTINUO at 182370]
+CS	0	15:30:35.617	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 16:00:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 185370 tp: 177370 [done]
+CS	0	15:30:35.617	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 16:00:00   VENDA EXECUTADA | preco 182370 | lote 1.00 | SL 185370 (3000 pts) | TP 177370 (5000 pts)
+CS	0	15:30:35.617	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 16:15:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.620	Trade	2026.03.17 17:30:00   exchange buy 1 WIN_CONTINUO at 182270, close #16 (182265 / 182270 / 182265)
+CS	0	15:30:35.620	Trades	2026.03.17 17:30:00   deal #17 buy 1 WIN_CONTINUO at 182270 done (based on order #17)
+CS	0	15:30:35.620	Trade	2026.03.17 17:30:00   deal performed [#17 buy 1 WIN_CONTINUO at 182270]
+CS	0	15:30:35.620	Trade	2026.03.17 17:30:00   order performed buy 1 at 182270 [#17 buy 1 WIN_CONTINUO at 182270]
+CS	0	15:30:35.620	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 17:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.620	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 17:30:00   POSICAO FECHADA | ticket 16 | motivo: horario de encerramento
+CS	0	15:30:35.620	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.17 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.622	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 09:02:00   === Novo pregao: 2026.03.18 | travas do dia liberadas ===
+CS	0	15:30:35.622	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 09:02:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.622	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 09:15:00   [ARMADO] COMPRA | DI+ 20.66 DI- 12.60 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.622	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 09:15:00   [RECUSA] ADX 18.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.623	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 09:30:00   [RECUSA] ADX 19.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.623	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.623	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:00:00   [ARMADO] VENDA | DI+ 12.52 DI- 20.45 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.623	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:00:00   [RECUSA] ADX 18.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.624	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:15:00   [RECUSA] ADX 19.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.624	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.624	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:30:00   [ARMADO] COMPRA | DI+ 17.82 DI- 15.34 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.624	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:30:00   [RECUSA] ADX 17.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.625	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:45:00   [RECUSA] ADX 19.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.625	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.631	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 14:45:00   [ARMADO] VENDA | DI+ 17.63 DI- 19.07 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.631	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 14:45:00   [RECUSA] ADX 21.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.631	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 15:00:00   [ARMADO] COMPRA | DI+ 27.40 DI- 16.14 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.631	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 15:00:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.632	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 15:15:00   [RECUSA] ADX 22.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.632	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 15:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.633	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 15:45:00   [ARMADO] VENDA | DI+ 16.60 DI- 18.59 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.633	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 15:45:00   [RECUSA] ADX 17.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.633	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 16:00:00   [RECUSA] ADX 19.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.633	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 16:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.634	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.635	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.18 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.637	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 09:00:00   === Novo pregao: 2026.03.19 | travas do dia liberadas ===
+CS	0	15:30:35.637	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.640	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 11:00:00   [ARMADO] COMPRA | DI+ 19.61 DI- 17.78 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.640	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 11:00:00   [RECUSA] ADX 38.7 nao esta subindo (anterior 44.8): entrada nao confirmada
+CS	0	15:30:35.641	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 11:15:00   [RECUSA] ADX 38.2 nao esta subindo (anterior 38.7): entrada nao confirmada
+CS	0	15:30:35.641	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 11:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.643	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:00:00   [ARMADO] VENDA | DI+ 18.30 DI- 19.31 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.643	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:00:00   [RECUSA] ADX 25.4 nao esta subindo (anterior 29.5): entrada nao confirmada
+CS	0	15:30:35.644	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:15:00   [ARMADO] COMPRA | DI+ 18.22 DI- 16.34 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.644	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:15:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.644	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:30:00   [ARMADO] VENDA | DI+ 15.42 DI- 19.12 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.644	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:30:00   [RECUSA] ADX 20.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.645	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:45:00   [RECUSA] ADX 19.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.645	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.648	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 16:00:00   [ARMADO] COMPRA | DI+ 16.37 DI- 13.81 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.648	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 16:00:00   [RECUSA] ADX 17.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.649	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 16:15:00   [RECUSA] ADX 20.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.649	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 16:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.649	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.651	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.19 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.652	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 09:00:00   === Novo pregao: 2026.03.20 | travas do dia liberadas ===
+CS	0	15:30:35.652	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.652	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 09:15:00   [ARMADO] VENDA | DI+ 11.87 DI- 24.69 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.652	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 09:15:00   [RECUSA] ADX 37.6 nao esta subindo (anterior 38.0): entrada nao confirmada
+CS	0	15:30:35.653	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 09:30:00   [RECUSA] ADX 33.8 nao esta subindo (anterior 37.6): entrada nao confirmada
+CS	0	15:30:35.653	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.663	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 16:30:00   [ARMADO] COMPRA | DI+ 19.22 DI- 18.25 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.663	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 16:30:00   [RECUSA] ADX 40.1 nao esta subindo (anterior 46.9): entrada nao confirmada
+CS	0	15:30:35.664	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.665	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.20 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.667	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 09:03:00   [DESARMADO] COMPRA armado no pregao anterior: cruzamento nao atravessa o pregao
+CS	0	15:30:35.667	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 09:03:00   === Novo pregao: 2026.03.23 | travas do dia liberadas ===
+CS	0	15:30:35.667	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.674	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 13:30:00   [ARMADO] VENDA | DI+ 16.63 DI- 22.87 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.674	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 13:30:00   [RECUSA] ADX 44.1 nao esta subindo (anterior 49.2): entrada nao confirmada
+CS	0	15:30:35.674	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 13:45:00   [RECUSA] ADX 38.4 nao esta subindo (anterior 44.1): entrada nao confirmada
+CS	0	15:30:35.674	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.675	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:00:00   [ARMADO] COMPRA | DI+ 18.91 DI- 16.38 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.675	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:00:00   [RECUSA] ADX 33.6 nao esta subindo (anterior 38.4): entrada nao confirmada
+CS	0	15:30:35.675	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:15:00   [ARMADO] VENDA | DI+ 16.00 DI- 16.14 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.675	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:15:00   [RECUSA] ADX 28.5 nao esta subindo (anterior 33.6): entrada nao confirmada
+CS	0	15:30:35.676	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:30:00   [ARMADO] COMPRA | DI+ 17.49 DI- 13.65 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.676	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:30:00   [RECUSA] ADX 26.0 nao esta subindo (anterior 28.5): entrada nao confirmada
+CS	0	15:30:35.676	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:45:00   [SINAL] COMPRA | DI+ 28.16 DI- 11.55 | ADX 28.45 subindo (anterior 26.02) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.676	Trade	2026.03.23 14:45:00   exchange buy 1 WIN_CONTINUO at 183435 sl: 180435 tp: 188435 (183430 / 183435 / 183430)
+CS	0	15:30:35.676	Trades	2026.03.23 14:45:00   deal #18 buy 1 WIN_CONTINUO at 183435 done (based on order #18)
+CS	0	15:30:35.676	Trade	2026.03.23 14:45:00   deal performed [#18 buy 1 WIN_CONTINUO at 183435]
+CS	0	15:30:35.676	Trade	2026.03.23 14:45:00   order performed buy 1 at 183435 [#18 buy 1 WIN_CONTINUO at 183435]
+CS	0	15:30:35.676	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:45:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 180435 tp: 188435 [done]
+CS	0	15:30:35.676	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 14:45:00   COMPRA EXECUTADA | preco 183435 | lote 1.00 | SL 180435 (3000 pts) | TP 188435 (5000 pts)
+CS	0	15:30:35.677	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 15:00:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.681	Trade	2026.03.23 17:30:00   exchange sell 1 WIN_CONTINUO at 184225, close #18 (184225 / 184230 / 184225)
+CS	0	15:30:35.682	Trades	2026.03.23 17:30:00   deal #19 sell 1 WIN_CONTINUO at 184225 done (based on order #19)
+CS	0	15:30:35.682	Trade	2026.03.23 17:30:00   deal performed [#19 sell 1 WIN_CONTINUO at 184225]
+CS	0	15:30:35.682	Trade	2026.03.23 17:30:00   order performed sell 1 at 184225 [#19 sell 1 WIN_CONTINUO at 184225]
+CS	0	15:30:35.682	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.682	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 17:30:00   POSICAO FECHADA | ticket 18 | motivo: horario de encerramento
+CS	0	15:30:35.682	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.23 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.683	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 09:00:00   === Novo pregao: 2026.03.24 | travas do dia liberadas ===
+CS	0	15:30:35.683	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.687	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 11:15:00   [ARMADO] COMPRA | DI+ 24.47 DI- 19.65 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.687	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 11:15:00   [RECUSA] ADX 44.2 nao esta subindo (anterior 50.3): entrada nao confirmada
+CS	0	15:30:35.687	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 11:30:00   [RECUSA] ADX 39.8 nao esta subindo (anterior 44.2): entrada nao confirmada
+CS	0	15:30:35.687	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 11:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.690	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 13:15:00   [ARMADO] VENDA | DI+ 21.26 DI- 24.65 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.690	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 13:15:00   [RECUSA] ADX 32.7 nao esta subindo (anterior 37.4): entrada nao confirmada
+CS	0	15:30:35.690	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 13:30:00   [ARMADO] COMPRA | DI+ 23.23 DI- 20.86 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.690	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 13:30:00   [RECUSA] ADX 28.5 nao esta subindo (anterior 32.7): entrada nao confirmada
+CS	0	15:30:35.691	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 13:45:00   [RECUSA] ADX 25.5 nao esta subindo (anterior 28.5): entrada nao confirmada
+CS	0	15:30:35.691	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.691	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 14:15:00   [ARMADO] VENDA | DI+ 15.07 DI- 25.20 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.691	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 14:15:00   [RECUSA] ADX 23.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.692	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 14:30:00   [RECUSA] ADX 24.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.692	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 14:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.693	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 15:15:00   [ARMADO] COMPRA | DI+ 21.53 DI- 13.70 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.693	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 15:15:00   [RECUSA] ADX 20.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.694	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 15:30:00   [RECUSA] ADX 22.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.694	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 15:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.696	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.697	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.24 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.698	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 09:03:00   === Novo pregao: 2026.03.25 | travas do dia liberadas ===
+CS	0	15:30:35.698	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.707	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 14:30:00   [ARMADO] VENDA | DI+ 14.65 DI- 15.01 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.707	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 14:30:00   [RECUSA] ADX 18.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.707	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 14:45:00   [ARMADO] COMPRA | DI+ 21.99 DI- 12.70 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.707	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 14:45:00   [RECUSA] ADX 19.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.708	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 15:00:00   [RECUSA] ADX 21.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.708	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 15:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.709	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 16:00:00   [ARMADO] VENDA | DI+ 16.03 DI- 24.47 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.709	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 16:00:00   [RECUSA] ADX 24.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.710	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 16:15:00   [RECUSA] ADX 24.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.710	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 16:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.710	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.711	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.25 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.713	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 09:00:00   === Novo pregao: 2026.03.26 | travas do dia liberadas ===
+CS	0	15:30:35.713	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.715	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 10:30:00   [ARMADO] COMPRA | DI+ 21.96 DI- 18.12 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.715	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 10:30:00   [RECUSA] ADX 33.3 nao esta subindo (anterior 37.6): entrada nao confirmada
+CS	0	15:30:35.715	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 10:45:00   [RECUSA] ADX 31.1 nao esta subindo (anterior 33.3): entrada nao confirmada
+CS	0	15:30:35.715	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.717	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:00:00   [ARMADO] VENDA | DI+ 20.38 DI- 20.69 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.717	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:00:00   [RECUSA] ADX 28.0 nao esta subindo (anterior 32.9): entrada nao confirmada
+CS	0	15:30:35.718	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:15:00   [ARMADO] COMPRA | DI+ 20.66 DI- 17.51 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.718	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:15:00   [RECUSA] ADX 25.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.718	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:30:00   [ARMADO] VENDA | DI+ 17.48 DI- 17.60 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.718	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:30:00   [RECUSA] ADX 21.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.719	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:45:00   [RECUSA] ADX 19.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.719	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 12:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.719	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:00:00   [ARMADO] COMPRA | DI+ 17.83 DI- 15.68 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.719	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:00:00   [RECUSA] ADX 17.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.720	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:15:00   [RECUSA] ADX 15.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.720	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.720	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:30:00   [ARMADO] VENDA | DI+ 12.77 DI- 23.76 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.720	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:30:00   [RECUSA] ADX 18.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.720	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:45:00   [RECUSA] ADX 22.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.720	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.724	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:00:00   [ARMADO] COMPRA | DI+ 20.97 DI- 15.35 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.724	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:00:00   [RECUSA] ADX 27.8 nao esta subindo (anterior 30.0): entrada nao confirmada
+CS	0	15:30:35.724	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:15:00   [ARMADO] VENDA | DI+ 17.75 DI- 21.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.724	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:15:00   [RECUSA] ADX 25.1 nao esta subindo (anterior 27.8): entrada nao confirmada
+CS	0	15:30:35.725	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:30:00   [RECUSA] ADX 22.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.725	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.725	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.726	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.26 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.728	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 09:00:00   === Novo pregao: 2026.03.27 | travas do dia liberadas ===
+CS	0	15:30:35.728	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.728	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 09:15:00   [ARMADO] VENDA | DI+ 9.12 DI- 22.69 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.728	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 09:15:00   [RECUSA] ADX 19.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.728	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 09:30:00   [RECUSA] ADX 22.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.728	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.732	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 11:30:00   [ARMADO] COMPRA | DI+ 17.81 DI- 12.46 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.732	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 11:30:00   [RECUSA] ADX 28.7 nao esta subindo (anterior 30.8): entrada nao confirmada
+CS	0	15:30:35.732	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 11:45:00   [RECUSA] ADX 27.0 nao esta subindo (anterior 28.7): entrada nao confirmada
+CS	0	15:30:35.732	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 11:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.734	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 13:15:00   [ARMADO] VENDA | DI+ 16.83 DI- 19.93 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.734	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 13:15:00   [RECUSA] ADX 33.0 nao esta subindo (anterior 37.5): entrada nao confirmada
+CS	0	15:30:35.735	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 13:30:00   [SINAL] VENDA | DI+ 14.24 DI- 28.45 | ADX 33.06 subindo (anterior 33.02) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.735	Trade	2026.03.27 13:30:00   exchange sell 1 WIN_CONTINUO at 183605 sl: 186605 tp: 178605 (183605 / 183610 / 183605)
+CS	0	15:30:35.735	Trades	2026.03.27 13:30:00   deal #20 sell 1 WIN_CONTINUO at 183605 done (based on order #20)
+CS	0	15:30:35.735	Trade	2026.03.27 13:30:00   deal performed [#20 sell 1 WIN_CONTINUO at 183605]
+CS	0	15:30:35.735	Trade	2026.03.27 13:30:00   order performed sell 1 at 183605 [#20 sell 1 WIN_CONTINUO at 183605]
+CS	0	15:30:35.735	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 13:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 186605 tp: 178605 [done]
+CS	0	15:30:35.735	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 13:30:00   VENDA EXECUTADA | preco 183605 | lote 1.00 | SL 186605 (3000 pts) | TP 178605 (5000 pts)
+CS	0	15:30:35.735	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 13:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.742	Trade	2026.03.27 17:30:00   exchange buy 1 WIN_CONTINUO at 182475, close #20 (182470 / 182475 / 182470)
+CS	0	15:30:35.742	Trades	2026.03.27 17:30:00   deal #21 buy 1 WIN_CONTINUO at 182475 done (based on order #21)
+CS	0	15:30:35.742	Trade	2026.03.27 17:30:00   deal performed [#21 buy 1 WIN_CONTINUO at 182475]
+CS	0	15:30:35.742	Trade	2026.03.27 17:30:00   order performed buy 1 at 182475 [#21 buy 1 WIN_CONTINUO at 182475]
+CS	0	15:30:35.742	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 17:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.742	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 17:30:00   POSICAO FECHADA | ticket 20 | motivo: horario de encerramento
+CS	0	15:30:35.742	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.27 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.744	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:03:00   === Novo pregao: 2026.03.30 | travas do dia liberadas ===
+CS	0	15:30:35.744	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.744	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:30:00   [ARMADO] COMPRA | DI+ 26.57 DI- 17.87 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.744	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:30:00   [RECUSA] ADX 38.9 nao esta subindo (anterior 42.5): entrada nao confirmada
+CS	0	15:30:35.745	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:45:00   [SINAL] COMPRA | DI+ 36.26 DI- 15.12 | ADX 39.28 subindo (anterior 38.94) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.745	Trade	2026.03.30 09:45:00   exchange buy 1 WIN_CONTINUO at 184230 sl: 181230 tp: 189230 (184225 / 184230 / 184225)
+CS	0	15:30:35.745	Trades	2026.03.30 09:45:00   deal #22 buy 1 WIN_CONTINUO at 184230 done (based on order #22)
+CS	0	15:30:35.745	Trade	2026.03.30 09:45:00   deal performed [#22 buy 1 WIN_CONTINUO at 184230]
+CS	0	15:30:35.745	Trade	2026.03.30 09:45:00   order performed buy 1 at 184230 [#22 buy 1 WIN_CONTINUO at 184230]
+CS	0	15:30:35.745	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:45:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 181230 tp: 189230 [done]
+CS	0	15:30:35.745	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 09:45:00   COMPRA EXECUTADA | preco 184230 | lote 1.00 | SL 181230 (3000 pts) | TP 189230 (5000 pts)
+CS	0	15:30:35.745	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 10:00:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.759	Trade	2026.03.30 17:30:00   exchange sell 1 WIN_CONTINUO at 183590, close #22 (183590 / 183595 / 183590)
+CS	0	15:30:35.759	Trades	2026.03.30 17:30:00   deal #23 sell 1 WIN_CONTINUO at 183590 done (based on order #23)
+CS	0	15:30:35.759	Trade	2026.03.30 17:30:00   deal performed [#23 sell 1 WIN_CONTINUO at 183590]
+CS	0	15:30:35.759	Trade	2026.03.30 17:30:00   order performed sell 1 at 183590 [#23 sell 1 WIN_CONTINUO at 183590]
+CS	0	15:30:35.759	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.759	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 17:30:00   POSICAO FECHADA | ticket 22 | motivo: horario de encerramento
+CS	0	15:30:35.759	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.30 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.761	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 09:00:00   === Novo pregao: 2026.03.31 | travas do dia liberadas ===
+CS	0	15:30:35.761	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.761	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 09:15:00   [ARMADO] COMPRA | DI+ 25.46 DI- 22.67 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.761	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 09:15:00   [RECUSA] ADX 22.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.761	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 09:30:00   [RECUSA] ADX 21.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.761	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.763	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 10:45:00   [ARMADO] VENDA | DI+ 20.74 DI- 21.44 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.763	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 10:45:00   [RECUSA] ADX 16.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.764	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:00:00   [ARMADO] COMPRA | DI+ 27.13 DI- 18.14 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.764	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:00:00   [RECUSA] ADX 16.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.764	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:15:00   [RECUSA] ADX 17.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.764	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.765	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:30:00   [ARMADO] VENDA | DI+ 20.58 DI- 26.01 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.765	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:30:00   [RECUSA] ADX 16.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.765	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:45:00   [RECUSA] ADX 18.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.765	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 11:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.768	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 13:30:00   [ARMADO] COMPRA | DI+ 18.76 DI- 13.10 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.768	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 13:30:00   [RECUSA] ADX 16.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.768	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 13:45:00   [RECUSA] ADX 20.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.768	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 13:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.773	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.774	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.31 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.775	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 09:02:00   === Novo pregao: 2026.04.01 | travas do dia liberadas ===
+CS	0	15:30:35.775	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 09:02:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.779	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 11:15:00   [ARMADO] VENDA | DI+ 14.00 DI- 18.41 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.779	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 11:15:00   [RECUSA] ADX 36.0 nao esta subindo (anterior 40.0): entrada nao confirmada
+CS	0	15:30:35.779	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 11:30:00   [RECUSA] ADX 35.6 nao esta subindo (anterior 36.0): entrada nao confirmada
+CS	0	15:30:35.779	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 11:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.780	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 12:00:00   [ARMADO] COMPRA | DI+ 19.79 DI- 17.05 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.780	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 12:00:00   [RECUSA] ADX 30.3 nao esta subindo (anterior 34.5): entrada nao confirmada
+CS	0	15:30:35.781	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 12:15:00   [SINAL] COMPRA | DI+ 30.16 DI- 14.42 | ADX 31.11 subindo (anterior 30.35) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.781	Trade	2026.04.01 12:15:00   exchange buy 1 WIN_CONTINUO at 189430 sl: 186430 tp: 194430 (189425 / 189430 / 189425)
+CS	0	15:30:35.781	Trades	2026.04.01 12:15:00   deal #24 buy 1 WIN_CONTINUO at 189430 done (based on order #24)
+CS	0	15:30:35.781	Trade	2026.04.01 12:15:00   deal performed [#24 buy 1 WIN_CONTINUO at 189430]
+CS	0	15:30:35.781	Trade	2026.04.01 12:15:00   order performed buy 1 at 189430 [#24 buy 1 WIN_CONTINUO at 189430]
+CS	0	15:30:35.781	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 12:15:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 186430 tp: 194430 [done]
+CS	0	15:30:35.781	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 12:15:00   COMPRA EXECUTADA | preco 189430 | lote 1.00 | SL 186430 (3000 pts) | TP 194430 (5000 pts)
+CS	0	15:30:35.781	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 12:30:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.790	Trade	2026.04.01 17:30:00   exchange sell 1 WIN_CONTINUO at 188640, close #24 (188640 / 188645 / 188640)
+CS	0	15:30:35.790	Trades	2026.04.01 17:30:00   deal #25 sell 1 WIN_CONTINUO at 188640 done (based on order #25)
+CS	0	15:30:35.790	Trade	2026.04.01 17:30:00   deal performed [#25 sell 1 WIN_CONTINUO at 188640]
+CS	0	15:30:35.790	Trade	2026.04.01 17:30:00   order performed sell 1 at 188640 [#25 sell 1 WIN_CONTINUO at 188640]
+CS	0	15:30:35.790	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.790	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 17:30:00   POSICAO FECHADA | ticket 24 | motivo: horario de encerramento
+CS	0	15:30:35.790	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.01 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.792	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 09:04:00   === Novo pregao: 2026.04.02 | travas do dia liberadas ===
+CS	0	15:30:35.792	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 09:04:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.794	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 10:45:00   [ARMADO] COMPRA | DI+ 17.51 DI- 16.60 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.794	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 10:45:00   [RECUSA] ADX 21.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.795	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 11:00:00   [RECUSA] ADX 22.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.795	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 11:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.798	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 13:15:00   [ARMADO] VENDA | DI+ 17.44 DI- 19.42 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.798	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 13:15:00   [RECUSA] ADX 38.4 nao esta subindo (anterior 44.4): entrada nao confirmada
+CS	0	15:30:35.799	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 13:30:00   [RECUSA] ADX 37.0 nao esta subindo (anterior 38.4): entrada nao confirmada
+CS	0	15:30:35.799	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 13:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.803	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 16:30:00   [ARMADO] COMPRA | DI+ 20.77 DI- 16.44 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.803	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 16:30:00   [RECUSA] ADX 28.0 nao esta subindo (anterior 31.0): entrada nao confirmada
+CS	0	15:30:35.804	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.805	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.02 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.806	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 09:03:00   [DESARMADO] COMPRA armado no pregao anterior: cruzamento nao atravessa o pregao
+CS	0	15:30:35.806	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 09:03:00   === Novo pregao: 2026.04.06 | travas do dia liberadas ===
+CS	0	15:30:35.806	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.808	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 10:15:00   [ARMADO] VENDA | DI+ 12.54 DI- 15.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.808	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 10:15:00   [RECUSA] ADX 24.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.809	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 10:30:00   [SINAL] VENDA | DI+ 10.61 DI- 25.45 | ADX 27.34 subindo (anterior 24.83) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.809	Trade	2026.04.06 10:30:00   exchange sell 1 WIN_CONTINUO at 188770 sl: 191770 tp: 183770 (188770 / 188775 / 188770)
+CS	0	15:30:35.809	Trades	2026.04.06 10:30:00   deal #26 sell 1 WIN_CONTINUO at 188770 done (based on order #26)
+CS	0	15:30:35.809	Trade	2026.04.06 10:30:00   deal performed [#26 sell 1 WIN_CONTINUO at 188770]
+CS	0	15:30:35.809	Trade	2026.04.06 10:30:00   order performed sell 1 at 188770 [#26 sell 1 WIN_CONTINUO at 188770]
+CS	0	15:30:35.809	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 10:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 191770 tp: 183770 [done]
+CS	0	15:30:35.809	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 10:30:00   VENDA EXECUTADA | preco 188770 | lote 1.00 | SL 191770 (3000 pts) | TP 183770 (5000 pts)
+CS	0	15:30:35.809	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 10:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.821	Trade	2026.04.06 17:30:00   exchange buy 1 WIN_CONTINUO at 188970, close #26 (188965 / 188970 / 188965)
+CS	0	15:30:35.821	Trades	2026.04.06 17:30:00   deal #27 buy 1 WIN_CONTINUO at 188970 done (based on order #27)
+CS	0	15:30:35.821	Trade	2026.04.06 17:30:00   deal performed [#27 buy 1 WIN_CONTINUO at 188970]
+CS	0	15:30:35.821	Trade	2026.04.06 17:30:00   order performed buy 1 at 188970 [#27 buy 1 WIN_CONTINUO at 188970]
+CS	0	15:30:35.821	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 17:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.821	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 17:30:00   POSICAO FECHADA | ticket 26 | motivo: horario de encerramento
+CS	0	15:30:35.821	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.06 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.823	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 09:00:00   === Novo pregao: 2026.04.07 | travas do dia liberadas ===
+CS	0	15:30:35.823	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.823	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 09:15:00   [ARMADO] VENDA | DI+ 11.60 DI- 24.85 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.823	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 09:15:00   [RECUSA] ADX 17.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.824	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 09:30:00   [RECUSA] ADX 22.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.824	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.827	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 11:45:00   [ARMADO] COMPRA | DI+ 27.01 DI- 21.92 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.827	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 11:45:00   [RECUSA] ADX 27.7 nao esta subindo (anterior 30.8): entrada nao confirmada
+CS	0	15:30:35.828	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 12:00:00   [RECUSA] ADX 25.5 nao esta subindo (anterior 27.7): entrada nao confirmada
+CS	0	15:30:35.828	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 12:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.828	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 12:15:00   [ARMADO] VENDA | DI+ 20.46 DI- 30.10 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.828	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 12:15:00   [RECUSA] ADX 24.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.828	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 12:30:00   [RECUSA] ADX 20.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.828	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 12:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.829	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 13:00:00   [ARMADO] COMPRA | DI+ 22.53 DI- 18.24 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.829	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 13:00:00   [RECUSA] ADX 16.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.830	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 13:15:00   [RECUSA] ADX 18.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.830	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 13:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.833	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 15:45:00   [ARMADO] VENDA | DI+ 12.24 DI- 14.52 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.833	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 15:45:00   [RECUSA] ADX 35.5 nao esta subindo (anterior 40.4): entrada nao confirmada
+CS	0	15:30:35.834	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 16:00:00   [SINAL] VENDA | DI+ 10.35 DI- 25.04 | ADX 36.45 subindo (anterior 35.53) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.834	Trade	2026.04.07 16:00:00   exchange sell 1 WIN_CONTINUO at 187400 sl: 190400 tp: 182400 (187400 / 187405 / 187400)
+CS	0	15:30:35.834	Trades	2026.04.07 16:00:00   deal #28 sell 1 WIN_CONTINUO at 187400 done (based on order #28)
+CS	0	15:30:35.834	Trade	2026.04.07 16:00:00   deal performed [#28 sell 1 WIN_CONTINUO at 187400]
+CS	0	15:30:35.834	Trade	2026.04.07 16:00:00   order performed sell 1 at 187400 [#28 sell 1 WIN_CONTINUO at 187400]
+CS	0	15:30:35.834	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 16:00:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 190400 tp: 182400 [done]
+CS	0	15:30:35.834	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 16:00:00   VENDA EXECUTADA | preco 187400 | lote 1.00 | SL 190400 (3000 pts) | TP 182400 (5000 pts)
+CS	0	15:30:35.834	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 16:15:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.836	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 17:01:40   TRAVA DIARIA | perda maxima atingida: R$ -302.00 (limite R$ -300.00)
+CS	0	15:30:35.836	Trade	2026.04.07 17:01:40   exchange buy 1 WIN_CONTINUO at 188915, close #28 (188910 / 188915 / 188910)
+CS	0	15:30:35.836	Trades	2026.04.07 17:01:40   deal #29 buy 1 WIN_CONTINUO at 188915 done (based on order #29)
+CS	0	15:30:35.836	Trade	2026.04.07 17:01:40   deal performed [#29 buy 1 WIN_CONTINUO at 188915]
+CS	0	15:30:35.836	Trade	2026.04.07 17:01:40   order performed buy 1 at 188915 [#29 buy 1 WIN_CONTINUO at 188915]
+CS	0	15:30:35.836	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 17:01:40   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.836	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 17:01:40   POSICAO FECHADA | ticket 28 | motivo: perda maxima diaria
+CS	0	15:30:35.836	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 17:01:40   [RECUSA] trava diaria atingida: sem novas entradas ate o proximo pregao
+CS	0	15:30:35.837	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.07 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.838	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 09:03:00   === Novo pregao: 2026.04.08 | travas do dia liberadas ===
+CS	0	15:30:35.838	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.842	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 11:15:00   [ARMADO] VENDA | DI+ 20.32 DI- 24.22 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.842	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 11:15:00   [RECUSA] ADX 41.4 nao esta subindo (anterior 47.3): entrada nao confirmada
+CS	0	15:30:35.842	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 11:30:00   [RECUSA] ADX 36.9 nao esta subindo (anterior 41.4): entrada nao confirmada
+CS	0	15:30:35.842	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 11:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.843	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 12:15:00   [ARMADO] COMPRA | DI+ 18.05 DI- 16.58 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.843	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 12:15:00   [RECUSA] ADX 27.8 nao esta subindo (anterior 32.1): entrada nao confirmada
+CS	0	15:30:35.844	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 12:30:00   [RECUSA] ADX 26.3 nao esta subindo (anterior 27.8): entrada nao confirmada
+CS	0	15:30:35.844	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 12:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.845	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 13:30:00   [ARMADO] VENDA | DI+ 15.43 DI- 18.06 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.845	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 13:30:00   [RECUSA] ADX 20.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.846	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 13:45:00   [ARMADO] COMPRA | DI+ 25.12 DI- 15.28 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.846	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 13:45:00   [RECUSA] ADX 21.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.846	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 14:00:00   [RECUSA] ADX 24.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.846	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 14:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.849	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 15:45:00   [ARMADO] VENDA | DI+ 16.98 DI- 18.39 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.849	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 15:45:00   [RECUSA] ADX 20.1 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.849	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 16:00:00   [RECUSA] ADX 19.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.849	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 16:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.850	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 16:30:00   [ARMADO] COMPRA | DI+ 18.37 DI- 16.08 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.850	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 16:30:00   [RECUSA] ADX 17.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.850	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.852	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.08 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.853	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 09:00:00   [DESARMADO] COMPRA armado no pregao anterior: cruzamento nao atravessa o pregao
+CS	0	15:30:35.853	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 09:00:00   === Novo pregao: 2026.04.09 | travas do dia liberadas ===
+CS	0	15:30:35.853	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.854	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 09:45:00   [ARMADO] COMPRA | DI+ 18.52 DI- 16.01 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.854	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 09:45:00   [RECUSA] ADX 20.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.855	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 10:00:00   [RECUSA] ADX 21.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.855	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 10:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.857	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 11:45:00   [ARMADO] VENDA | DI+ 19.45 DI- 21.11 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.857	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 11:45:00   [RECUSA] ADX 30.5 nao esta subindo (anterior 35.3): entrada nao confirmada
+CS	0	15:30:35.858	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 12:00:00   [ARMADO] COMPRA | DI+ 30.63 DI- 17.87 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.858	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 12:00:00   [RECUSA] ADX 29.8 nao esta subindo (anterior 30.5): entrada nao confirmada
+CS	0	15:30:35.858	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 12:15:00   [RECUSA] ADX 28.0 nao esta subindo (anterior 29.8): entrada nao confirmada
+CS	0	15:30:35.858	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 12:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.864	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 15:45:00   [ARMADO] VENDA | DI+ 14.66 DI- 20.86 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.864	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 15:45:00   [RECUSA] ADX 28.8 nao esta subindo (anterior 30.8): entrada nao confirmada
+CS	0	15:30:35.864	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 16:00:00   [ARMADO] COMPRA | DI+ 24.48 DI- 17.65 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.864	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 16:00:00   [RECUSA] ADX 26.8 nao esta subindo (anterior 28.8): entrada nao confirmada
+CS	0	15:30:35.865	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 16:15:00   [SINAL] COMPRA | DI+ 26.77 DI- 14.94 | ADX 27.07 subindo (anterior 26.84) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.865	Trade	2026.04.09 16:15:00   exchange buy 1 WIN_CONTINUO at 195790 sl: 192790 tp: 200790 (195785 / 195790 / 195785)
+CS	0	15:30:35.865	Trades	2026.04.09 16:15:00   deal #30 buy 1 WIN_CONTINUO at 195790 done (based on order #30)
+CS	0	15:30:35.865	Trade	2026.04.09 16:15:00   deal performed [#30 buy 1 WIN_CONTINUO at 195790]
+CS	0	15:30:35.865	Trade	2026.04.09 16:15:00   order performed buy 1 at 195790 [#30 buy 1 WIN_CONTINUO at 195790]
+CS	0	15:30:35.865	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 16:15:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 192790 tp: 200790 [done]
+CS	0	15:30:35.865	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 16:15:00   COMPRA EXECUTADA | preco 195790 | lote 1.00 | SL 192790 (3000 pts) | TP 200790 (5000 pts)
+CS	0	15:30:35.865	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 16:30:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.867	Trade	2026.04.09 17:30:00   exchange sell 1 WIN_CONTINUO at 195880, close #30 (195880 / 195885 / 195880)
+CS	0	15:30:35.867	Trades	2026.04.09 17:30:00   deal #31 sell 1 WIN_CONTINUO at 195880 done (based on order #31)
+CS	0	15:30:35.867	Trade	2026.04.09 17:30:00   deal performed [#31 sell 1 WIN_CONTINUO at 195880]
+CS	0	15:30:35.867	Trade	2026.04.09 17:30:00   order performed sell 1 at 195880 [#31 sell 1 WIN_CONTINUO at 195880]
+CS	0	15:30:35.867	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.867	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 17:30:00   POSICAO FECHADA | ticket 30 | motivo: horario de encerramento
+CS	0	15:30:35.867	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.09 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.869	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 09:00:00   === Novo pregao: 2026.04.10 | travas do dia liberadas ===
+CS	0	15:30:35.869	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.874	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 12:15:00   [ARMADO] VENDA | DI+ 15.89 DI- 19.89 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.874	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 12:15:00   [RECUSA] ADX 48.0 nao esta subindo (anterior 54.7): entrada nao confirmada
+CS	0	15:30:35.874	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 12:30:00   [ARMADO] COMPRA | DI+ 21.06 DI- 16.83 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.874	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 12:30:00   [RECUSA] ADX 42.4 nao esta subindo (anterior 48.0): entrada nao confirmada
+CS	0	15:30:35.874	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 12:45:00   [RECUSA] ADX 38.0 nao esta subindo (anterior 42.4): entrada nao confirmada
+CS	0	15:30:35.874	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 12:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.875	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 13:00:00   [ARMADO] VENDA | DI+ 15.92 DI- 23.64 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.875	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 13:00:00   [RECUSA] ADX 35.1 nao esta subindo (anterior 38.0): entrada nao confirmada
+CS	0	15:30:35.875	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 13:15:00   [RECUSA] ADX 32.7 nao esta subindo (anterior 35.1): entrada nao confirmada
+CS	0	15:30:35.875	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 13:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.878	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 15:00:00   [ARMADO] COMPRA | DI+ 18.55 DI- 12.71 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.878	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 15:00:00   [RECUSA] ADX 25.7 nao esta subindo (anterior 27.0): entrada nao confirmada
+CS	0	15:30:35.878	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 15:15:00   [RECUSA] ADX 21.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.878	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 15:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.881	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.882	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.10 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.883	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 09:03:00   === Novo pregao: 2026.04.13 | travas do dia liberadas ===
+CS	0	15:30:35.883	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.888	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 12:15:00   [ARMADO] VENDA | DI+ 13.80 DI- 18.97 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.888	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 12:15:00   [RECUSA] ADX 31.8 nao esta subindo (anterior 34.7): entrada nao confirmada
+CS	0	15:30:35.889	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 12:30:00   [RECUSA] ADX 30.6 nao esta subindo (anterior 31.8): entrada nao confirmada
+CS	0	15:30:35.889	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 12:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.890	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 13:15:00   [ARMADO] COMPRA | DI+ 24.25 DI- 15.10 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.890	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 13:15:00   [RECUSA] ADX 27.8 nao esta subindo (anterior 28.7): entrada nao confirmada
+CS	0	15:30:35.890	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 13:30:00   [SINAL] COMPRA | DI+ 26.93 DI- 12.78 | ADX 29.04 subindo (anterior 27.84) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.890	Trade	2026.04.13 13:30:00   exchange buy 1 WIN_CONTINUO at 197300 sl: 194300 tp: 202300 (197295 / 197300 / 197295)
+CS	0	15:30:35.890	Trades	2026.04.13 13:30:00   deal #32 buy 1 WIN_CONTINUO at 197300 done (based on order #32)
+CS	0	15:30:35.890	Trade	2026.04.13 13:30:00   deal performed [#32 buy 1 WIN_CONTINUO at 197300]
+CS	0	15:30:35.890	Trade	2026.04.13 13:30:00   order performed buy 1 at 197300 [#32 buy 1 WIN_CONTINUO at 197300]
+CS	0	15:30:35.890	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 13:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 194300 tp: 202300 [done]
+CS	0	15:30:35.890	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 13:30:00   COMPRA EXECUTADA | preco 197300 | lote 1.00 | SL 194300 (3000 pts) | TP 202300 (5000 pts)
+CS	0	15:30:35.891	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 13:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.897	Trade	2026.04.13 17:30:00   exchange sell 1 WIN_CONTINUO at 197965, close #32 (197965 / 197970 / 197965)
+CS	0	15:30:35.897	Trades	2026.04.13 17:30:00   deal #33 sell 1 WIN_CONTINUO at 197965 done (based on order #33)
+CS	0	15:30:35.897	Trade	2026.04.13 17:30:00   deal performed [#33 sell 1 WIN_CONTINUO at 197965]
+CS	0	15:30:35.897	Trade	2026.04.13 17:30:00   order performed sell 1 at 197965 [#33 sell 1 WIN_CONTINUO at 197965]
+CS	0	15:30:35.897	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.897	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 17:30:00   POSICAO FECHADA | ticket 32 | motivo: horario de encerramento
+CS	0	15:30:35.897	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.13 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.899	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 09:00:00   === Novo pregao: 2026.04.14 | travas do dia liberadas ===
+CS	0	15:30:35.899	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.900	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 09:15:00   [ARMADO] COMPRA | DI+ 22.96 DI- 15.53 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.900	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 09:15:00   [RECUSA] ADX 26.1 nao esta subindo (anterior 27.3): entrada nao confirmada
+CS	0	15:30:35.900	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 09:30:00   [RECUSA] ADX 22.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.900	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.904	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 12:15:00   [ARMADO] VENDA | DI+ 12.26 DI- 25.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.904	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 12:15:00   [RECUSA] ADX 22.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.905	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 12:30:00   [RECUSA] ADX 22.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.905	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 12:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.908	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 14:15:00   [ARMADO] COMPRA | DI+ 24.02 DI- 14.64 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.908	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 14:15:00   [RECUSA] ADX 23.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.908	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 14:30:00   [SINAL] COMPRA | DI+ 25.17 DI- 12.39 | ADX 25.26 subindo (anterior 23.66) | 1 barra(s) apos o cruzamento
+CS	0	15:30:35.908	Trade	2026.04.14 14:30:00   exchange buy 1 WIN_CONTINUO at 198890 sl: 195890 tp: 203890 (198885 / 198890 / 198885)
+CS	0	15:30:35.908	Trades	2026.04.14 14:30:00   deal #34 buy 1 WIN_CONTINUO at 198890 done (based on order #34)
+CS	0	15:30:35.908	Trade	2026.04.14 14:30:00   deal performed [#34 buy 1 WIN_CONTINUO at 198890]
+CS	0	15:30:35.908	Trade	2026.04.14 14:30:00   order performed buy 1 at 198890 [#34 buy 1 WIN_CONTINUO at 198890]
+CS	0	15:30:35.908	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 14:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 195890 tp: 203890 [done]
+CS	0	15:30:35.908	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 14:30:00   COMPRA EXECUTADA | preco 198890 | lote 1.00 | SL 195890 (3000 pts) | TP 203890 (5000 pts)
+CS	0	15:30:35.909	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 14:45:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:35.914	Trade	2026.04.14 17:30:00   exchange sell 1 WIN_CONTINUO at 198820, close #34 (198820 / 198825 / 198820)
+CS	0	15:30:35.914	Trades	2026.04.14 17:30:00   deal #35 sell 1 WIN_CONTINUO at 198820 done (based on order #35)
+CS	0	15:30:35.914	Trade	2026.04.14 17:30:00   deal performed [#35 sell 1 WIN_CONTINUO at 198820]
+CS	0	15:30:35.914	Trade	2026.04.14 17:30:00   order performed sell 1 at 198820 [#35 sell 1 WIN_CONTINUO at 198820]
+CS	0	15:30:35.914	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:35.914	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 17:30:00   POSICAO FECHADA | ticket 34 | motivo: horario de encerramento
+CS	0	15:30:35.914	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.14 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.915	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:03:00   === Novo pregao: 2026.04.15 | travas do dia liberadas ===
+CS	0	15:30:35.915	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.916	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:15:00   [ARMADO] COMPRA | DI+ 19.57 DI- 18.48 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.916	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:15:00   [RECUSA] ADX 27.8 nao esta subindo (anterior 32.3): entrada nao confirmada
+CS	0	15:30:35.916	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:30:00   [ARMADO] VENDA | DI+ 16.56 DI- 20.08 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.916	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:30:00   [RECUSA] ADX 25.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.917	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:45:00   [RECUSA] ADX 22.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.917	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 09:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.917	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:00:00   [ARMADO] COMPRA | DI+ 16.59 DI- 14.37 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.917	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:00:00   [RECUSA] ADX 20.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.918	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:15:00   [ARMADO] VENDA | DI+ 14.04 DI- 16.48 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.918	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:15:00   [RECUSA] ADX 18.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.918	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:30:00   [ARMADO] COMPRA | DI+ 24.06 DI- 13.95 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.918	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:30:00   [RECUSA] ADX 19.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.918	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:45:00   [RECUSA] ADX 21.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.918	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.920	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 11:30:00   [ARMADO] VENDA | DI+ 15.70 DI- 26.43 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.920	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 11:30:00   [RECUSA] ADX 19.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.920	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 11:45:00   [RECUSA] ADX 21.2 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.920	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 11:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.924	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 14:30:00   [ARMADO] COMPRA | DI+ 17.55 DI- 17.32 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.924	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 14:30:00   [RECUSA] ADX 28.0 nao esta subindo (anterior 33.0): entrada nao confirmada
+CS	0	15:30:35.925	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 14:45:00   [ARMADO] VENDA | DI+ 14.85 DI- 19.16 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.925	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 14:45:00   [RECUSA] ADX 25.6 nao esta subindo (anterior 28.0): entrada nao confirmada
+CS	0	15:30:35.925	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 15:00:00   [ARMADO] COMPRA | DI+ 16.61 DI- 16.21 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.925	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 15:00:00   [RECUSA] ADX 21.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.926	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 15:15:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.926	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 15:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.928	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.929	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.15 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.931	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 09:03:00   === Novo pregao: 2026.04.16 | travas do dia liberadas ===
+CS	0	15:30:35.931	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.931	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 09:15:00   [ARMADO] COMPRA | DI+ 22.05 DI- 14.02 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.931	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 09:15:00   [RECUSA] ADX 16.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.931	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 09:30:00   [RECUSA] ADX 16.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.931	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.933	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 10:45:00   [ARMADO] VENDA | DI+ 18.01 DI- 25.79 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.933	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 10:45:00   [RECUSA] ADX 23.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.934	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 11:00:00   [RECUSA] ADX 23.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.934	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 11:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.937	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 13:00:00   [ARMADO] COMPRA | DI+ 19.20 DI- 13.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.937	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 13:00:00   [RECUSA] ADX 22.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.937	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 13:15:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.937	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 13:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.938	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 13:45:00   [ARMADO] VENDA | DI+ 15.98 DI- 22.69 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.938	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 13:45:00   [RECUSA] ADX 22.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.938	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 14:00:00   [RECUSA] ADX 21.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.938	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 14:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.943	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.944	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.16 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.945	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 09:03:00   === Novo pregao: 2026.04.17 | travas do dia liberadas ===
+CS	0	15:30:35.945	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.946	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 09:15:00   [ARMADO] COMPRA | DI+ 22.69 DI- 20.45 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.946	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 09:15:00   [RECUSA] ADX 18.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.946	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 09:30:00   [RECUSA] ADX 18.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.946	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 09:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.948	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 10:45:00   [ARMADO] VENDA | DI+ 25.21 DI- 29.98 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.948	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 10:45:00   [RECUSA] ADX 23.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.949	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 11:00:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.949	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 11:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.953	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 13:30:00   [ARMADO] COMPRA | DI+ 21.54 DI- 20.21 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.953	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 13:30:00   [RECUSA] ADX 29.2 nao esta subindo (anterior 34.0): entrada nao confirmada
+CS	0	15:30:35.953	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 13:45:00   [ARMADO] VENDA | DI+ 18.22 DI- 20.01 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.953	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 13:45:00   [RECUSA] ADX 25.5 nao esta subindo (anterior 29.2): entrada nao confirmada
+CS	0	15:30:35.953	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 14:00:00   [RECUSA] ADX 22.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.953	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 14:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.955	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 15:00:00   [ARMADO] COMPRA | DI+ 18.15 DI- 11.67 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.955	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 15:00:00   [RECUSA] ADX 17.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.955	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 15:15:00   [ARMADO] VENDA | DI+ 15.36 DI- 21.80 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.956	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 15:30:00   [RECUSA] ADX 17.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.956	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 15:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.958	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.959	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.17 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.960	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 09:00:00   === Novo pregao: 2026.04.20 | travas do dia liberadas ===
+CS	0	15:30:35.960	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.962	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:00:00   [ARMADO] COMPRA | DI+ 19.12 DI- 16.29 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.962	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:00:00   [RECUSA] ADX 28.7 nao esta subindo (anterior 32.5): entrada nao confirmada
+CS	0	15:30:35.962	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:15:00   [ARMADO] VENDA | DI+ 16.18 DI- 25.07 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.962	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:15:00   [RECUSA] ADX 27.6 nao esta subindo (anterior 28.7): entrada nao confirmada
+CS	0	15:30:35.963	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:30:00   [ARMADO] COMPRA | DI+ 24.26 DI- 21.22 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.963	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:30:00   [RECUSA] ADX 24.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.963	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:45:00   [RECUSA] ADX 21.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.963	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 10:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.964	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 11:00:00   [ARMADO] VENDA | DI+ 17.37 DI- 24.52 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.964	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 11:00:00   [RECUSA] ADX 21.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.964	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 11:15:00   [RECUSA] ADX 23.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.964	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 11:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.965	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 11:45:00   [ARMADO] COMPRA | DI+ 32.42 DI- 23.54 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.965	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 11:45:00   [RECUSA] ADX 20.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.965	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 12:00:00   [RECUSA] ADX 18.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.965	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 12:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.968	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 14:00:00   [ARMADO] VENDA | DI+ 14.64 DI- 21.69 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.968	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 14:00:00   [RECUSA] ADX 22.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.969	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 14:15:00   [RECUSA] ADX 21.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.969	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 14:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.972	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 16:15:00   [ARMADO] COMPRA | DI+ 20.66 DI- 19.64 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.972	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 16:15:00   [RECUSA] ADX 21.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.972	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 16:30:00   [RECUSA] ADX 17.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.972	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 16:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.973	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.974	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.20 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.975	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 09:03:00   === Novo pregao: 2026.04.22 | travas do dia liberadas ===
+CS	0	15:30:35.975	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.976	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 09:45:00   [ARMADO] VENDA | DI+ 16.58 DI- 18.60 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.976	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 09:45:00   [RECUSA] ADX 14.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.977	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:00:00   [RECUSA] ADX 13.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.977	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.977	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:15:00   [ARMADO] COMPRA | DI+ 23.45 DI- 13.32 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.977	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:15:00   [RECUSA] ADX 15.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.978	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:30:00   [RECUSA] ADX 17.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.978	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.978	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:45:00   [ARMADO] VENDA | DI+ 16.79 DI- 22.05 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.978	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 10:45:00   [RECUSA] ADX 16.9 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.979	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 11:00:00   [RECUSA] ADX 16.4 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.979	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 11:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.988	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.989	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.22 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:35.990	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 09:03:00   === Novo pregao: 2026.04.23 | travas do dia liberadas ===
+CS	0	15:30:35.990	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:35.993	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 10:30:00   [ARMADO] COMPRA | DI+ 19.44 DI- 17.87 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.993	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 10:30:00   [RECUSA] ADX 35.4 nao esta subindo (anterior 41.1): entrada nao confirmada
+CS	0	15:30:35.993	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 10:45:00   [ARMADO] VENDA | DI+ 16.45 DI- 22.47 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.993	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 10:45:00   [RECUSA] ADX 32.4 nao esta subindo (anterior 35.4): entrada nao confirmada
+CS	0	15:30:35.993	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 11:00:00   [RECUSA] ADX 31.2 nao esta subindo (anterior 32.4): entrada nao confirmada
+CS	0	15:30:35.993	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 11:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.995	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 11:45:00   [ARMADO] COMPRA | DI+ 14.11 DI- 14.01 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.995	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 11:45:00   [RECUSA] ADX 22.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.995	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 12:00:00   [ARMADO] VENDA | DI+ 11.94 DI- 12.79 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.995	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 12:00:00   [RECUSA] ADX 19.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.995	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 12:15:00   [RECUSA] ADX 22.5 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.995	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 12:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.998	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 13:45:00   [ARMADO] COMPRA | DI+ 25.93 DI- 23.56 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.998	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 13:45:00   [RECUSA] ADX 21.6 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.998	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 14:00:00   [RECUSA] ADX 19.0 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.998	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 14:00:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:35.998	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 14:15:00   [ARMADO] VENDA | DI+ 18.57 DI- 29.79 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:35.998	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 14:15:00   [RECUSA] ADX 19.7 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.999	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 14:30:00   [RECUSA] ADX 22.8 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:35.999	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 14:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:36.002	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:36.003	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.23 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:36.005	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 09:03:00   === Novo pregao: 2026.04.24 | travas do dia liberadas ===
+CS	0	15:30:36.005	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:36.014	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:00:00   [ARMADO] COMPRA | DI+ 21.45 DI- 14.84 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.014	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:00:00   [RECUSA] ADX 34.0 nao esta subindo (anterior 36.9): entrada nao confirmada
+CS	0	15:30:36.014	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:15:00   [RECUSA] ADX 29.3 nao esta subindo (anterior 34.0): entrada nao confirmada
+CS	0	15:30:36.015	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:15:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:36.015	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:30:00   [ARMADO] VENDA | DI+ 15.36 DI- 22.25 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.015	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:30:00   [RECUSA] ADX 27.6 nao esta subindo (anterior 29.3): entrada nao confirmada
+CS	0	15:30:36.015	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:45:00   [ARMADO] COMPRA | DI+ 27.31 DI- 18.83 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.015	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 15:45:00   [RECUSA] ADX 26.2 nao esta subindo (anterior 27.6): entrada nao confirmada
+CS	0	15:30:36.016	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 16:00:00   [SINAL] COMPRA | DI+ 30.27 DI- 15.93 | ADX 26.95 subindo (anterior 26.21) | 1 barra(s) apos o cruzamento
+CS	0	15:30:36.016	Trade	2026.04.24 16:00:00   exchange buy 1 WIN_CONTINUO at 194200 sl: 191200 tp: 199200 (194195 / 194200 / 194195)
+CS	0	15:30:36.016	Trades	2026.04.24 16:00:00   deal #36 buy 1 WIN_CONTINUO at 194200 done (based on order #36)
+CS	0	15:30:36.016	Trade	2026.04.24 16:00:00   deal performed [#36 buy 1 WIN_CONTINUO at 194200]
+CS	0	15:30:36.016	Trade	2026.04.24 16:00:00   order performed buy 1 at 194200 [#36 buy 1 WIN_CONTINUO at 194200]
+CS	0	15:30:36.016	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 16:00:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO sl: 191200 tp: 199200 [done]
+CS	0	15:30:36.016	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 16:00:00   COMPRA EXECUTADA | preco 194200 | lote 1.00 | SL 191200 (3000 pts) | TP 199200 (5000 pts)
+CS	0	15:30:36.016	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 16:15:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:36.019	Trade	2026.04.24 17:30:00   exchange sell 1 WIN_CONTINUO at 194230, close #36 (194230 / 194235 / 194230)
+CS	0	15:30:36.019	Trades	2026.04.24 17:30:00   deal #37 sell 1 WIN_CONTINUO at 194230 done (based on order #37)
+CS	0	15:30:36.019	Trade	2026.04.24 17:30:00   deal performed [#37 sell 1 WIN_CONTINUO at 194230]
+CS	0	15:30:36.019	Trade	2026.04.24 17:30:00   order performed sell 1 at 194230 [#37 sell 1 WIN_CONTINUO at 194230]
+CS	0	15:30:36.019	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 17:30:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO [done]
+CS	0	15:30:36.019	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 17:30:00   POSICAO FECHADA | ticket 36 | motivo: horario de encerramento
+CS	0	15:30:36.019	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.24 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:36.020	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 09:00:00   === Novo pregao: 2026.04.27 | travas do dia liberadas ===
+CS	0	15:30:36.020	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 09:00:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:36.024	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:00:00   [ARMADO] VENDA | DI+ 12.77 DI- 14.10 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.024	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:00:00   [RECUSA] ADX 32.7 nao esta subindo (anterior 37.7): entrada nao confirmada
+CS	0	15:30:36.024	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:15:00   [ARMADO] COMPRA | DI+ 12.77 DI- 11.93 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.024	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:15:00   [RECUSA] ADX 28.1 nao esta subindo (anterior 32.7): entrada nao confirmada
+CS	0	15:30:36.024	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:30:00   [RECUSA] ADX 24.3 < 25.0: tendencia sem forca, entrada nao confirmada
+CS	0	15:30:36.024	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:36.025	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:45:00   [ARMADO] VENDA | DI+ 9.14 DI- 17.74 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.025	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:45:00   [SINAL] VENDA | DI+ 9.14 DI- 17.74 | ADX 25.51 subindo (anterior 24.34) | 0 barra(s) apos o cruzamento
+CS	0	15:30:36.025	Trade	2026.04.27 11:45:00   exchange sell 1 WIN_CONTINUO at 194075 sl: 197075 tp: 189075 (194075 / 194080 / 194075)
+CS	0	15:30:36.025	Trades	2026.04.27 11:45:00   deal #38 sell 1 WIN_CONTINUO at 194075 done (based on order #38)
+CS	0	15:30:36.025	Trade	2026.04.27 11:45:00   deal performed [#38 sell 1 WIN_CONTINUO at 194075]
+CS	0	15:30:36.025	Trade	2026.04.27 11:45:00   order performed sell 1 at 194075 [#38 sell 1 WIN_CONTINUO at 194075]
+CS	0	15:30:36.025	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:45:00   CTrade::OrderSend: exchange sell 1.00 WIN_CONTINUO sl: 197075 tp: 189075 [done]
+CS	0	15:30:36.025	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 11:45:00   VENDA EXECUTADA | preco 194075 | lote 1.00 | SL 197075 (3000 pts) | TP 189075 (5000 pts)
+CS	0	15:30:36.025	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 12:00:00   [RECUSA] ja existe posicao aberta deste robo
+CS	0	15:30:36.035	Trade	2026.04.27 17:30:00   exchange buy 1 WIN_CONTINUO at 192925, close #38 (192920 / 192925 / 192920)
+CS	0	15:30:36.035	Trades	2026.04.27 17:30:00   deal #39 buy 1 WIN_CONTINUO at 192925 done (based on order #39)
+CS	0	15:30:36.035	Trade	2026.04.27 17:30:00   deal performed [#39 buy 1 WIN_CONTINUO at 192925]
+CS	0	15:30:36.035	Trade	2026.04.27 17:30:00   order performed buy 1 at 192925 [#39 buy 1 WIN_CONTINUO at 192925]
+CS	0	15:30:36.035	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 17:30:00   CTrade::OrderSend: exchange buy 1.00 WIN_CONTINUO [done]
+CS	0	15:30:36.035	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 17:30:00   POSICAO FECHADA | ticket 38 | motivo: horario de encerramento
+CS	0	15:30:36.035	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.27 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:36.037	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 09:03:00   === Novo pregao: 2026.04.28 | travas do dia liberadas ===
+CS	0	15:30:36.037	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 09:03:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:36.042	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 12:30:00   [ARMADO] COMPRA | DI+ 23.97 DI- 18.50 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.042	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 12:30:00   [RECUSA] ADX 40.6 nao esta subindo (anterior 45.7): entrada nao confirmada
+CS	0	15:30:36.043	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 12:45:00   [RECUSA] ADX 37.3 nao esta subindo (anterior 40.6): entrada nao confirmada
+CS	0	15:30:36.043	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 12:45:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:36.047	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 15:15:00   [ARMADO] VENDA | DI+ 16.55 DI- 16.92 | aguardando ADX >= 25.0 e subindo
+CS	0	15:30:36.047	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 15:15:00   [RECUSA] ADX 31.6 nao esta subindo (anterior 37.1): entrada nao confirmada
+CS	0	15:30:36.047	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 15:30:00   [RECUSA] ADX 26.9 nao esta subindo (anterior 31.6): entrada nao confirmada
+CS	0	15:30:36.047	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 15:30:00   [DESARMADO] 2 barra(s) sem confirmacao do ADX (limite 1)
+CS	0	15:30:36.049	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 16:45:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:36.050	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.28 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:36.052	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.29 09:02:00   === Novo pregao: 2026.04.29 | travas do dia liberadas ===
+CS	0	15:30:36.052	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.29 09:02:00   [RECUSA] fora da janela de horario de funcionamento
+CS	0	15:30:36.065	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.29 17:30:00   [RECUSA] fora do horario: passou do horario de encerramento
+CS	0	15:30:36.067	Tester	final balance 100905.00 BRL
+CS	0	15:30:36.067	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.04.29 18:24:59   ADX Bussola finalizado (motivo 1).
+CS	0	15:30:36.071	Tester	WIN_CONTINUO,M15: 92436 ticks, 1558 bars generated. Environment synchronized in 0:00:00.181. Test passed in 0:00:00.739 (including ticks preprocessing 0:00:00.005).
+CS	0	15:30:36.071	Tester	WIN_CONTINUO,M15: total time from login to stop testing 0:00:00.920 (including 0:00:00.181 for history data synchronization)
+CS	0	15:30:36.071	Tester	1 Mb memory used including 0.94 Mb of history data, 64 Mb of tick data
+CS	0	15:30:36.071	Tester	log file "Y:\Tester\Agent-127.0.0.1-3000\logs\20260906.log" written
+CS	0	15:30:36.074	Tester	test Experts\Trabalho01\Robo_ADX_WIN.ex5 on WIN_CONTINUO,M15 thread finished
+CS	0	15:30:36.280	127.0.0.1	tester forced to close
+CS	0	15:30:36.280	127.0.0.1	prepare for shutdown
+CS	0	15:30:36.280	127.0.0.1	stop immediately
+CS	0	15:30:36.280	127.0.0.1	shutdown finished
+CS	0	15:30:36.548	Server	MetaTester 5 stopped

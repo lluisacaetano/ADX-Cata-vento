@@ -1,0 +1,53 @@
+CS	0	15:31:35.597	Startup	MetaTester 5 build 6182, 5 Sep 2026
+CS	0	15:31:35.599	Startup	Windows 11 build 22000 on Wine 11.1 Darwin 25.6.0, 10 x VirtualApple @ 2.50GHz, x64, 4 / 15 Gb memory, 270 / 460 Gb disk, GMT-3
+CS	0	15:31:35.604	Server	MetaTester 5 started on 127.0.0.1:3000
+CS	0	15:31:35.610	Startup	cloud network mode is off
+CS	0	15:31:35.611	Startup	initialization finished
+CS	0	15:31:35.901	127.0.0.1	login (build 6182)
+CS	0	15:31:35.926	Network	6692 bytes of account info loaded
+CS	0	15:31:35.927	Network	1478 bytes of tester parameters loaded
+CS	0	15:31:35.927	Network	10436 bytes of input parameters loaded
+CS	0	15:31:36.053	Network	598926 bytes of symbols list loaded (72445 symbols)
+CS	0	15:31:36.054	Tester	expert file added: Experts\Trabalho01\Robo_ADX_WIN.ex5. 50607 bytes loaded
+CS	0	15:31:36.057	Tester	4152 Mb available, 51 blocks set for ticks generating
+CS	0	15:31:36.058	Tester	initial deposit 100000.00 BRL, leverage 1:1
+CS	0	15:31:36.060	Tester	successfully initialized
+CS	0	15:31:36.060	Network	453 Kb of total initialization data received
+CS	0	15:31:36.060	Tester	VirtualApple @ 2.50GHz, 16383 MB
+CS	0	15:31:36.082	Symbols	WIN_CONTINUO: symbol to be synchronized
+CS	0	15:31:36.085	Symbols	WIN_CONTINUO: symbol synchronized, 3720 bytes of symbol info received
+CS	0	15:31:36.092	History	WIN_CONTINUO: load 39 bytes of history data to synchronize in 0:00:00.002
+CS	0	15:31:36.092	History	WIN_CONTINUO: history synchronized from 2024.01.02 to 2026.08.21
+CS	0	15:31:36.111	History	WIN_CONTINUO,M15: history cache allocated for 15144 bars and contains 10945 bars from 2025.01.02 09:00 to 2026.02.27 18:15
+CS	0	15:31:36.111	History	WIN_CONTINUO,M15: history begins from 2025.01.02 09:00
+CS	0	15:31:36.113	Tester	WIN_CONTINUO,M15 (XPMT5-DEMO): 1 minutes OHLC ticks generating
+CS	0	15:31:36.113	Tester	WIN_CONTINUO,M15: testing of Experts\Trabalho01\Robo_ADX_WIN.ex5 from 2026.03.02 00:00 to 2026.04.30 00:00 started with inputs:
+CS	0	15:31:36.113	Tester	  Indicador (DMI / ADX)=
+CS	0	15:31:36.113	Tester	  InpDMIPeriodo=12
+CS	0	15:31:36.113	Tester	  Confirmacao de forca (ADX)=
+CS	0	15:31:36.113	Tester	  InpUsarConfirmacaoADX=true
+CS	0	15:31:36.113	Tester	  InpADXMinimo=150.0
+CS	0	15:31:36.113	Tester	  InpBarrasConfirmacao=1
+CS	0	15:31:36.113	Tester	  Gestao de risco=
+CS	0	15:31:36.113	Tester	  InpLote=1.0
+CS	0	15:31:36.113	Tester	  InpStopLoss=150
+CS	0	15:31:36.113	Tester	  InpTakeProfit=375
+CS	0	15:31:36.113	Tester	  Horarios (HH:MM, hora do servidor)=
+CS	0	15:31:36.113	Tester	  InpHoraInicio=09:15
+CS	0	15:31:36.113	Tester	  InpHoraFim=16:30
+CS	0	15:31:36.113	Tester	  InpHoraFechamento=17:30
+CS	0	15:31:36.113	Tester	  Trava diaria de resultado=
+CS	0	15:31:36.113	Tester	  InpGanhoMaxDia=500.0
+CS	0	15:31:36.113	Tester	  InpPerdaMaxDia=300.0
+CS	0	15:31:36.113	Tester	  Execucao=
+CS	0	15:31:36.113	Tester	  InpMagic=20262
+CS	0	15:31:36.113	Tester	  InpLogDetalhado=true
+CS	0	15:31:36.140	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 00:00:00   Parametro invalido: o limiar do ADX deve ficar entre 0 e 100.
+CS	0	15:31:36.142	Robo_ADX_WIN (WIN_CONTINUO,M15)	2026.03.02 00:00:00   ADX Bussola finalizado (motivo 8).
+CS	2	15:31:36.142	Tester	tester stopped because OnInit reports incorrect input parameters
+CS	0	15:31:36.143	Tester	test Experts\Trabalho01\Robo_ADX_WIN.ex5 on WIN_CONTINUO,M15 thread finished
+CS	0	15:31:36.386	127.0.0.1	tester forced to close
+CS	0	15:31:36.386	127.0.0.1	prepare for shutdown
+CS	0	15:31:36.386	127.0.0.1	stop immediately
+CS	0	15:31:36.387	127.0.0.1	shutdown finished
+CS	0	15:31:36.597	Server	MetaTester 5 stopped
